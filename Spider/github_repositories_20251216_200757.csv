@@ -1,0 +1,510 @@
+﻿﻿仓库名称,GitHub地址,Star数量,Fork数量,简介,仓库说明
+microsoft/AirSim,https://github.com/microsoft/AirSim,17773,4819,,"Open source simulator for autonomous vehicles built on Unreal Engine / Unity, from Microsoft AI & Research"
+Dujltqzv/Some-Many-Books,https://github.com/Dujltqzv/Some-Many-Books,17012,1743,,个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　...
+Allar/ue5-style-guide,https://github.com/Allar/ue5-style-guide,5991,1241,,An attempt to make Unreal Engine 4 projects more consistent
+tranek/GASDocumentation,https://github.com/tranek/GASDocumentation,5465,947,,My understanding of Unreal Engine 5's GameplayAbilitySystem plugin with a simple multiplayer sample project.
+tomlooman/ActionRoguelike,https://github.com/tomlooman/ActionRoguelike,4279,770,,C++ Action Roguelike in Unreal Engine 5.
+ketoo/NoahGameFrame,https://github.com/ketoo/NoahGameFrame,4118,1116,,"A fast, scalable, distributed game server engine/framework for C++, include the actor library, network library, can be used as a  real time multiplayer game engine ( MMO RPG/MOBA ), which support C#/L..."
+praydog/UEVR,https://github.com/praydog/UEVR,3976,213,,Universal Unreal Engine VR Mod (4.8 - 5.4)
+ncsoft/Unreal.js,https://github.com/ncsoft/Unreal.js,3741,348,,Unreal.js: Javascript runtime built for UnrealEngine
+tomlooman/EpicSurvivalGame,https://github.com/tomlooman/EpicSurvivalGame,3360,1178,,Third-person Survival Game for Unreal Engine (Sample Project)
+nxrighthere/UnrealCLR,https://github.com/nxrighthere/UnrealCLR,3278,247,,Unreal Engine .NET 6 integration
+EpicGamesExt/BlenderTools,https://github.com/EpicGamesExt/BlenderTools,3082,108,,Blender addons that improve the game development workflow between Blender and Unreal.
+20tab/UnrealEnginePython,https://github.com/20tab/UnrealEnginePython,2860,766,,Embed Python in Unreal Engine 4
+gildor2/UEViewer,https://github.com/gildor2/UEViewer,2759,541,,Viewer and exporter for Unreal Engine 1-4 assets (UE Viewer).
+ShadowfallStudios/ALS-Community,https://github.com/ShadowfallStudios/ALS-Community,2555,624,,Replicated and optimized community version of Advanced Locomotion System V4 for Unreal Engine 5.4 with additional features & bug fixes
+4sval/FModel,https://github.com/4sval/FModel,2407,363,,Unreal Engine Archives Explorer
+xavier150/Blender-For-UnrealEngine-Addons,https://github.com/xavier150/Blender-For-UnrealEngine-Addons,2398,275,,I have created this addons for export asset from Blender to Unreal Engine
+ue4plugins/StreetMap,https://github.com/ue4plugins/StreetMap,2237,450,,Import OpenStreetMap data into Unreal Engine
+MaikKlein/unreal-rust,https://github.com/MaikKlein/unreal-rust,2213,88,,Rust integration for Unreal Engine 5
+unrealcv/unrealcv,https://github.com/unrealcv/unrealcv,2084,453,,UnrealCV: Connecting Computer Vision to Unreal Engine
+Tencent/sluaunreal,https://github.com/Tencent/sluaunreal,1928,444,,lua dev plugin for unreal engine 4 or 5
+TriAxis-Games/RealtimeMeshComponent,https://github.com/TriAxis-Games/RealtimeMeshComponent,1695,420,,Unreal Engine 5 plugin component for rendering runtime generated content.
+MothCocoon/FlowGraph,https://github.com/MothCocoon/FlowGraph,1688,324,,Design-agnostic node system for scripting game’s flow in Unreal Engine 
+VoxelPlugin/VoxelPluginFreeLegacy,https://github.com/VoxelPlugin/VoxelPluginFreeLegacy,1678,320,,Voxel Plugin Legacy for Unreal Engine
+UnrealSharp/UnrealSharp,https://github.com/UnrealSharp/UnrealSharp,1643,161,,"UnrealSharp is a plugin to Unreal Engine 5, which enables developers to create games using C# (.NET 9) with Hot Reload"
+Encryqed/Dumper-7,https://github.com/Encryqed/Dumper-7,1515,357,,Unreal Engine SDK Generator
+sideeffects/HoudiniEngineForUnreal,https://github.com/sideeffects/HoudiniEngineForUnreal,1509,390,,Houdini Engine Plugin for Unreal Engine.
+insthync/awesome-unreal,https://github.com/insthync/awesome-unreal,1493,113,,A categorized collection of awesome opensource Unreal Engine 4 and 5 repos
+hxhb/HotPatcher,https://github.com/hxhb/HotPatcher,1447,369,,Unreal Engine hot update manage and package plugin.
+ProjectBorealis/PBCharacterMovement,https://github.com/ProjectBorealis/PBCharacterMovement,1426,172,,"HL2-style, classic FPS movement for Unreal Engine implemented in C++"
+UE4-OceanProject/OceanProject,https://github.com/UE4-OceanProject/OceanProject,1397,538,,"Environment Plugin Project (Ocean Simulation, Sky Simulation, Buoyancy, Time, Fish plugins for  Unreal Engine 4)"
+mikeroyal/Unreal-Engine-Guide,https://github.com/mikeroyal/Unreal-Engine-Guide,1384,146,,"Unreal Engine 5 Guide. Learn to develop games for Windows, Linux, macOS, iOS, Android, Xbox Series X|S, PlayStation  5, Nintendo Switch."
+jashking/UnrealPakViewer,https://github.com/jashking/UnrealPakViewer,1364,299,,查看 UE4 Pak 文件的图形化工具，支持 UE4 pak/ucas 文件
+OldUnreal/UnrealTournamentPatches,https://github.com/OldUnreal/UnrealTournamentPatches,1339,31,,
+Harrison1/unrealcpp,https://github.com/Harrison1/unrealcpp,1301,223,,Unreal Engine 4 C++ examples
+MrRobinOfficial/Guide-UnrealEngine,https://github.com/MrRobinOfficial/Guide-UnrealEngine,1286,111,,This repository is designed to help developers learn how to get started with Unreal Engine and C++.
+getnamo/TensorFlow-Unreal,https://github.com/getnamo/TensorFlow-Unreal,1211,212,,TensorFlow plugin for the Unreal Engine.
+Spuckwaffel/UEDumper,https://github.com/Spuckwaffel/UEDumper,1203,234,,The most powerful Unreal Engine Dumper and Editor for UE 4.19 - 5.3
+CesiumGS/cesium-unreal,https://github.com/CesiumGS/cesium-unreal,1121,332,,Bringing the 3D geospatial ecosystem to Unreal Engine
+ufna/VaRest,https://github.com/ufna/VaRest,1121,333,,REST API plugin for Unreal Engine 4 - we love restfull backend and JSON communications!
+tranek/GASShooter,https://github.com/tranek/GASShooter,1097,289,,Advanced FPS/TPS Sample Project for Unreal Engine 4's GameplayAbilitySystem plugin
+chongdashu/unreal-mcp,https://github.com/chongdashu/unreal-mcp,1081,159,,"Enable AI assistant clients like Cursor, Windsurf and Claude Desktop to control Unreal Engine through natural language using the Model Context Protocol (MCP)."
+ikrima/gamedevguide,https://github.com/ikrima/gamedevguide,1069,108,,Game Development & Unreal Engine Programming Guide
+iniside/ActionRPGGame,https://github.com/iniside/ActionRPGGame,1033,323,,Unreal Engine 4 Action RPG type game starter kit.
+Megafunk/MassSample,https://github.com/Megafunk/MassSample,1020,152,,My understanding of Unreal Engine 5's experimental ECS plugin with a small sample project.
+truong-bui/AsyncLoadingScreen,https://github.com/truong-bui/AsyncLoadingScreen,1014,130,,"Async Loading Screen is a free and open-source plugin for Unreal Engine. Async Loading Screen allows you to easily configure a Loading Screen System in the project settings, and automatically add a Lo..."
+dpjudas/SurrealEngine,https://github.com/dpjudas/SurrealEngine,997,33,,Unreal Tournament Engine Reimplementation
+Temaran/UnrealEngineShaderPluginDemo,https://github.com/Temaran/UnrealEngineShaderPluginDemo,990,252,,A tutorial project that shows how to implement HLSL Pixel and Compute shaders in UE4
+landelare/ue5coro,https://github.com/landelare/ue5coro,981,89,,A deeply-integrated C++20 coroutine plugin for Unreal Engine 5.
+getnamo/SocketIOClient-Unreal,https://github.com/getnamo/SocketIOClient-Unreal,966,244,,Socket.IO client plugin for the Unreal Engine.
+YawLighthouse/UMG-Slate-Compendium,https://github.com/YawLighthouse/UMG-Slate-Compendium,966,87,,A Compendium Information Guide for UMG and Slate in Unreal Engine.
+xverse-engine/XScene-UEPlugin,https://github.com/xverse-engine/XScene-UEPlugin,961,108,,"A Unreal Engine 5 (UE5) based plugin aiming to provide real-time visulization, management, editing, and scalable hybrid rendering of Guassian Splatting model."
+fjz13/UnrealSpecifiers,https://github.com/fjz13/UnrealSpecifiers,945,148,,"UE5标识符详解，包含100多个标识符以及300多个meta的解释和示例。Detailed Explanation of UE5 Identifiers, including over 100 identifiers and explanations and examples for more than 300 meta tags."
+PolygonHive/GASP-ALS,https://github.com/PolygonHive/GASP-ALS,925,262,,Game Animation Sample with ALS Layering | Unreal Engine 5
+SRombauts/UEGitPlugin,https://github.com/SRombauts/UEGitPlugin,869,163,,Unreal Engine 5 Git LFS 2 Source Control Plugin (beta)
+SergioBenitez/Figment,https://github.com/SergioBenitez/Figment,852,45,,"A hierarchical configuration library so con-free, it's unreal."
+kp7742/UE4Dumper,https://github.com/kp7742/UE4Dumper,832,343,,Unreal Engine 4 Dumper - Dump libUE4.so and Generate Structure SDK
+adamrehn/ue4-docker,https://github.com/adamrehn/ue4-docker,829,177,,Windows and Linux containers for Unreal Engine 4
+atenfyr/UAssetGUI,https://github.com/atenfyr/UAssetGUI,813,106,,A tool designed for low-level examination and modification of Unreal Engine game assets by hand.
+DruidMech/UE5_TheUltimateDeveloperCourse,https://github.com/DruidMech/UE5_TheUltimateDeveloperCourse,799,208,,Unreal Engine 5 C++ The Ultimate Developer Course
+terrehbyte/awesome-ue4,https://github.com/terrehbyte/awesome-ue4,788,90,,A curated list of resources for working with Unreal Engine 4. (Awesome Unreal Engine 4)
+sebh/UnrealEngineSkyAtmosphere,https://github.com/sebh/UnrealEngineSkyAtmosphere,786,74,,Unreal Engine Sky Atmosphere Rendering Technique
+strangergwenn/HeliumRain,https://github.com/strangergwenn/HeliumRain,769,114,,"HELIUM RAIN / Full sources for Helium Rain, a realistic space opera using Unreal Engine 4"
+npruehs/ue4-rts,https://github.com/npruehs/ue4-rts,766,154,,Real-time strategy plugin and showcase for Unreal Engine 4.
+enziop/mixamo_converter,https://github.com/enziop/mixamo_converter,760,170,,Blender addon for converting mixamo animations to Unreal 4 rootmotion
+KellanM/OpenAI-Api-Unreal,https://github.com/KellanM/OpenAI-Api-Unreal,758,176,,Integration for the OpenAI Api in Unreal Engine
+mamoniem/UnrealEditorPythonScripts,https://github.com/mamoniem/UnrealEditorPythonScripts,753,216,,"Some of my personal scripts i made to use for my own projects, but free of charge to be used for any project and any purpose as long as it is not violating the LICENSE file or the Unreal Engine EULA."
+segross/UnrealImGui,https://github.com/segross/UnrealImGui,746,250,,Unreal plug-in that integrates Dear ImGui framework into Unreal Engine 4.
+BenPyton/ProceduralDungeon,https://github.com/BenPyton/ProceduralDungeon,735,83,,This is an Unreal Engine 4/5 plugin to generate procedural dungeon.
+ProjectBorealis/UEGitPlugin,https://github.com/ProjectBorealis/UEGitPlugin,727,144,,Unreal Engine Git Source Control Plugin (refactored)
+crazytuzi/UnrealCSharp,https://github.com/crazytuzi/UnrealCSharp,719,105,,"UnrealCSharp, based on .NET 8 (Mono), is a C# programming plugin for UE."
+eidosmontreal/unreal-vdb,https://github.com/eidosmontreal/unreal-vdb,713,114,,This repo is a non-official Unreal plugin that can read OpenVDB and NanoVDB files in Unreal.
+MOZGIII/ue5-gitignore,https://github.com/MOZGIII/ue5-gitignore,693,160,,A git setup example with git-lfs for Unreal Engine 5 (and 4) projects.
+ryanjon2040/Unreal-Binary-Builder,https://github.com/ryanjon2040/Unreal-Binary-Builder,686,152,,An application designed to create installed Unreal Engine builds (aka Rocket builds) from Unreal Engine GitHub source.
+rdeioris/LuaMachine,https://github.com/rdeioris/LuaMachine,681,131,,Unreal Engine Plugin for Lua APIs implementation
+allcoolthingsatoneplace/UnrealPakTool,https://github.com/allcoolthingsatoneplace/UnrealPakTool,675,96,,UnrealPak 4.27.0 [ Tool ] -extract *.pak files for Unreal Engine 4 [win64]
+tomlooman/SimpleFPSTemplate,https://github.com/tomlooman/SimpleFPSTemplate,669,239,,Simple C++ FPS Template for Unreal Engine
+AlexanderDzhoganov/ComfyTextures,https://github.com/AlexanderDzhoganov/ComfyTextures,655,81,,Unreal Engine ⚔️ ComfyUI - Automatic texturing using generative diffusion models 
+tomlooman/ue4-tutorials,https://github.com/tomlooman/ue4-tutorials,596,185,,Collection of Unreal 4 Tutorials & Experiments.
+bw2012/UE4VoxelTerrain,https://github.com/bw2012/UE4VoxelTerrain,587,126,,Unreal Engine 4: Smooth voxel terrian example
+guttir14/UnrealDumper-4.25,https://github.com/guttir14/UnrealDumper-4.25,585,253,,
+NotYetGames/DlgSystem,https://github.com/NotYetGames/DlgSystem,567,95,,Dialogue Plugin System for Unreal Engine
+DarklightGames/io_scene_psk_psa,https://github.com/DarklightGames/io_scene_psk_psa,552,37,,A Blender extension for importing and exporting Unreal PSK and PSA files
+panzi/u4pak,https://github.com/panzi/u4pak,546,140,,"unpack, pack, list, check and mount Unreal Engine 4 .pak archives"
+Nebukam/PCGExtendedToolkit,https://github.com/Nebukam/PCGExtendedToolkit,545,73,,"PCGEx is a free (libre) Unreal 5 plugin that expands PCG capabilities. It offers a variety of high-performance nodes; with an edge for building relational graphs (Freeform, Delaunay, Voronoi, MST etc)..."
+Jim-Kroovy/Mr-Mannequins-Tools,https://github.com/Jim-Kroovy/Mr-Mannequins-Tools,536,63,,"Read the wiki installation instructions for sublime character rigging, intuitive Blender imports and easy Unreal exports!"
+matghazaryan/Unrealm,https://github.com/matghazaryan/Unrealm,535,72,,"Unrealm is an extension on RealmCocoa, which enables Swift native types to be saved in Realm."
+Phyronnaz/HLSLMaterial,https://github.com/Phyronnaz/HLSLMaterial,535,77,,HLSL Material for Unreal Engine
+sinbad/SPUD,https://github.com/sinbad/SPUD,532,81,,Steve's Persistent Unreal Data library
+arnaud-jamin/Cog,https://github.com/arnaud-jamin/Cog,531,75,,Cog is a set of debug tools for Unreal Engine built on top of Dear ImGui
+ue4plugins/LoadingScreen,https://github.com/ue4plugins/LoadingScreen,511,159,,A plugin for Unreal Engine 4 to expose simple controls for managing load screens.
+NegInfinity/ProjectExodus,https://github.com/NegInfinity/ProjectExodus,503,100,,Project Exodus - Unity to Unreal scene/project transfer tool.
+rdeioris/glTFRuntime,https://github.com/rdeioris/glTFRuntime,492,139,,Unreal Engine Plugin for loading glTF files at runtime 
+nfrechette/acl-ue4-plugin,https://github.com/nfrechette/acl-ue4-plugin,492,62,,The official Animation Compression Library Unreal Engine 4 and 5 plugin
+unrealircd/unrealircd,https://github.com/unrealircd/unrealircd,482,148,,Official UnrealIRCd repository. Downloads are available from our site
+threepeatgames/ThreepeatAnimTools,https://github.com/threepeatgames/ThreepeatAnimTools,478,77,,Threepeat Anim Tools (Tatools) - Animation tools for Unreal 5.4+
+Polarmods/DevX-Cracked,https://github.com/Polarmods/DevX-Cracked,473,98,,"Cracked and improved version of DevX, a powerful Unity and Unreal Engine tool."
+Tencent/BqLog,https://github.com/Tencent/BqLog,471,41,,"Maybe the world's fastest logging library, originating from the client of the top mobile game Honor of Kings, is lightweight, works on PC, mobile, and servers, supports C#, Java, and C++, and is well ..."
+CorrM/Unreal-Finder-Tool,https://github.com/CorrM/Unreal-Finder-Tool,456,173,,Useful tool to help you fetch and dump Unreal Engine 4 Games information.
+kvick-games/UnrealMCP,https://github.com/kvick-games/UnrealMCP,454,60,,MCP to allow AI agents to control Unreal
+code-iai/ROSIntegration,https://github.com/code-iai/ROSIntegration,454,142,,Unreal Engine Plugin to enable ROS Support
+AIFanatic/three-nanite,https://github.com/AIFanatic/three-nanite,454,24,,An attempt at reproducing unreal nanite in threejs
+botman99/ue4-unreal-automation-tool,https://github.com/botman99/ue4-unreal-automation-tool,451,58,,
+jbtronics/UE4-CheatSheet,https://github.com/jbtronics/UE4-CheatSheet,450,59,,"An Cheat Sheet for Unreal Engine 4 C++ programming, licensed under CC BY-NC-SA 4.0"
+marvelmaster/UE4_Dynamic_Water_Project_V3,https://github.com/marvelmaster/UE4_Dynamic_Water_Project_V3,443,124,,Unreal Engine 4 Dynamic Water Project by marvelmaster
+protospatial/NodeToCode,https://github.com/protospatial/NodeToCode,439,61,,Translate Unreal Engine Blueprints to C++ in seconds. Not hours.
+EliotVU/Unreal-Library,https://github.com/EliotVU/Unreal-Library,432,93,,"Decompiler for Unreal package files (.upk, .u, .uasset; etc), with support for Unreal Engine 1, 2, and 3"
+pixeltris/USharp,https://github.com/pixeltris/USharp,431,70,,C# plugin for Unreal Engine 4
+proletariatgames/unreal.hx,https://github.com/proletariatgames/unreal.hx,429,44,,Unreal.hx: Haxe Integration for Unreal
+zfw1226/gym-unrealcv,https://github.com/zfw1226/gym-unrealcv,425,84,,Unreal environments for reinforcement learning
+Megasteakman/MegaMocapVR,https://github.com/Megasteakman/MegaMocapVR,424,65,,A SteamVR powered mocap solution for Unreal Engine
+trumank/repak,https://github.com/trumank/repak,424,57,,Unreal Engine .pak file library and CLI in rust
+miyosuda/unreal,https://github.com/miyosuda/unreal,423,129,,Reinforcement learning with unsupervised auxiliary tasks
+aquanox/SubsystemBrowserPlugin,https://github.com/aquanox/SubsystemBrowserPlugin,415,64,,Plugin that adds a Subsystem Browser panel for Unreal Engine Editor to explore running subsystems and edit their properties.
+Noesis/Tutorials,https://github.com/Noesis/Tutorials,414,135,,"NoesisGUI samples (C++, C#, Unity, Unreal)"
+UnrealisticDev/Renom,https://github.com/UnrealisticDev/Renom,414,24,,A simple tool to rename Unreal Engine projects.
+spatialos/UnrealGDK,https://github.com/spatialos/UnrealGDK,413,140,,SpatialOS GDK for Unreal Plugin
+pdlogingithub/UE4-Node-Graph-Assistant,https://github.com/pdlogingithub/UE4-Node-Graph-Assistant,412,73,,A plugin to help you to create node graph faster and easier in unreal engine 4.
+RobinKa/netprints,https://github.com/RobinKa/netprints,406,103,,Visual programming for .NET inspired by Unreal Engine's Blueprints
+JediKnightChan/EternalCrusadeResurrection,https://github.com/JediKnightChan/EternalCrusadeResurrection,405,75,,"Unreal Engine 5 multiplayer shooter C++ project, resurrection of Warhammer 40K: Eternal Crusade. Developed using ""UE best practices"" from Lyra for a more complex behaviour"
+tomlooman/StealthGameUdemy,https://github.com/tomlooman/StealthGameUdemy,402,179,,C++ Stealth Game in Unreal Engine (Udemy Project)
+trumank/uesave-rs,https://github.com/trumank/uesave-rs,400,67,,Rust library and CLI to read and write Unreal Engine save files
+gtreshchev/RuntimeAudioImporter,https://github.com/gtreshchev/RuntimeAudioImporter,398,88,,Runtime Audio Importer plugin for Unreal Engine. Importing audio of various formats at runtime.
+microsoft/vc-ue-extensions,https://github.com/microsoft/vc-ue-extensions,386,94,,Components for integration between Visual Studio and Unreal Engine.
+CobraCodeDev/TP_2DSideScrollerBP,https://github.com/CobraCodeDev/TP_2DSideScrollerBP,385,51,,A basic 2D side scroller blueprint template for Unreal Engine 5
+betidestudio/EOSIntegrationKit,https://github.com/betidestudio/EOSIntegrationKit,384,80,,EIK (Epic Online Services Integration Kit) is a plugin that enables seamless integration between Epic Online Services (EOS) and Unreal Engine. The plugin provides access to the EOS SDK (Software Devel...
+tomlooman/CoopShooterUdemy,https://github.com/tomlooman/CoopShooterUdemy,383,141,,C++ Coop Horde Third-person Shooter for Unreal Engine 4 (Udemy Project)
+Jay2645/Unreal-Polygonal-Map-Gen,https://github.com/Jay2645/Unreal-Polygonal-Map-Gen,382,76,,An Unreal Engine 4 implementation of the Polygonal Map Generator for generating islands found at http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation/
+deltacv/PaperVision,https://github.com/deltacv/PaperVision,380,15,," Create your custom OpenCV algorithms using a user-friendly node editor interface, inspired by Blender and Unreal Engine blueprints! Quickly prototype your vision as you edit."
+getnamo/UDP-Unreal,https://github.com/getnamo/UDP-Unreal,372,82,,Convenience UDP wrapper for the Unreal Engine.
+facebookarchive/UETorch,https://github.com/facebookarchive/UETorch,369,69,,A Torch plugin for Unreal Engine 4.
+ibbles/LearningUnrealEngine,https://github.com/ibbles/LearningUnrealEngine,368,56,,"[Deprecated, see LearningUnreal instead.] A bunch of notes and code snippets that I write while figuring out how to use the Unreal Engine."
+mitchemmc/VRContentExamples,https://github.com/mitchemmc/VRContentExamples,367,93,,Unreal Engine 4 community VR content examples
+polivilas/UnrealEngineSDKGenerator,https://github.com/polivilas/UnrealEngineSDKGenerator,365,233,,Generate SDKs from Unreal Engine games (UE1 - 4 supported).
+bw2012/UnrealSandboxTerrain,https://github.com/bw2012/UnrealSandboxTerrain,362,87,,Unreal Engine smooth voxel terrain plugin
+atenfyr/UAssetAPI,https://github.com/atenfyr/UAssetAPI,362,79,,A low-level .NET library for reading and writing Unreal Engine game assets.
+hfjooste/UltimateStarterKit,https://github.com/hfjooste/UltimateStarterKit,353,28,,The Ultimate Starter Kit plugin to speed up development of Unreal Engine games
+HoussineMehnik/UE4-CustomGravityPlugin,https://github.com/HoussineMehnik/UE4-CustomGravityPlugin,352,95,,Unreal Engine 4 : Custom Gravity Plugin
+SiggiG/ProceduralMeshDemos,https://github.com/SiggiG/ProceduralMeshDemos,352,69,,Examples of procedural mesh generation in Unreal 4.
+justdark/UE_Android_LiveLink,https://github.com/justdark/UE_Android_LiveLink,347,100,,an android alternative implementation for unreal face live link
+jdcook/fresh_cooked_tweens,https://github.com/jdcook/fresh_cooked_tweens,347,40,,"Tweens for Unreal Engine, with C++ API and Blueprint support"
+DarknessFX/UEMaterials,https://github.com/DarknessFX/UEMaterials,345,32,,DarknessFX Collection of Unreal Engine Materials
+Noesis/UnrealPlugin,https://github.com/Noesis/UnrealPlugin,344,65,,NoesisGUI Integration to Unreal Engine
+LuggLD/SmearFrame,https://github.com/LuggLD/SmearFrame,344,54,,Unreal Engine 4 smear frame material effect
+chris-gong/flopnite-ue4,https://github.com/chris-gong/flopnite-ue4,342,119,,"An attempt at remaking the popular battle royale game, Fortnite, using Unreal Engine 4 and Amazon GameLift"
+TheNaeem/UnrealMappingsDumper,https://github.com/TheNaeem/UnrealMappingsDumper,341,37,,A dumper that generates mappings (.usmap) files for datamining Unreal Engine games.
+SourySK/NiagaraUIRenderer,https://github.com/SourySK/NiagaraUIRenderer,337,82,,Niagara UI Renderer | Free Plugin for Unreal Engine
+neil3d/UnrealCookbook,https://github.com/neil3d/UnrealCookbook,336,110,,虚幻4引擎的一些编程实践分享
+prajwalshettydev/UnrealGenAISupport,https://github.com/prajwalshettydev/UnrealGenAISupport,336,55,,"An Unreal Engine plugin for LLM/GenAI models & MCP UE5 server. Includes OpenAI's GPT 5.1, Deepseek V3.1, Claude Sonnet 4.5 APIs, Gemini 3, Alibaba Qwen, Kimi and Grok 4.1, with plans to add Gemini, au..."
+coderespawn/prefabricator-ue4,https://github.com/coderespawn/prefabricator-ue4,336,79,,Prefabricator - Prefab plugin for Unreal Engine 4 https://prefabricator.dev
+Mountea-Framework/MounteaDialogueSystem,https://github.com/Mountea-Framework/MounteaDialogueSystem,335,32,,Mountea Dialogue System is an Open-source Mountea Framework tool for Unreal Engine for creating (not just) complex dialogues! Provides its own Dialogue Tree editor and validation system.
+monsieurgustav/UE-OSC,https://github.com/monsieurgustav/UE-OSC,332,97,,OSC plugin for Unreal Engine 4 Blueprints
+NotYetGames/WarriOrb,https://github.com/NotYetGames/WarriOrb,332,62,,"Full source code for WarriOrb, a Dark-Souls like action platformer - using Unreal Engine 4"
+MJx0/AndUEDumper,https://github.com/MJx0/AndUEDumper,329,144,,Android Unreal Engine Dumper Tool
+aiekick/Awesome_Unreal_Engine_4_-_5,https://github.com/aiekick/Awesome_Unreal_Engine_4_-_5,325,29,,"UE4/UE5 Ressources Collection (Plugins, Effects, Doc, Tools, etc...)"
+JanSeliv/Bomber,https://github.com/JanSeliv/Bomber,325,48,,Open-source multiplayer game made in Unreal Engine 5.6
+getnamo/GlobalEventSystem-Unreal,https://github.com/getnamo/GlobalEventSystem-Unreal,323,44,,Loosely coupled internal event system plugin for the Unreal Engine.
+VedantRGosavi/UE5-MCP,https://github.com/VedantRGosavi/UE5-MCP,323,48,,MCP for Unreal Engine 5
+microsoft/MixedReality-UXTools-Unreal,https://github.com/microsoft/MixedReality-UXTools-Unreal,322,86,,UX tools and components for developing Mixed Reality applications in UE4. 
+mikeroyal/Game-Console-Dev-Guide,https://github.com/mikeroyal/Game-Console-Dev-Guide,321,25,,"Game Console Dev Guide. Learn to develop games for Xbox Series X|S, PlayStation 5, Nintendo Switch, Steam Deck, and Apple Silicon. Developing with Unreal Engine 5, Unity, Godot Engine, and Blender."
+Voidware-Prohibited/ALSXT,https://github.com/Voidware-Prohibited/ALSXT,317,54,,"An Unreal Engine 5 plugin that extends ALS-Refactored with a set of popular replicated gameplay features, to demonstrate the extendability of ALS-Refactored in a Modular, Data-Driven, UE5 Way. The fea..."
+benui-dev/UE-BUITween,https://github.com/benui-dev/UE-BUITween,314,42,,Unreal 4 UMG UI tweening plugin in C++
+shaderwitch/UE4Minimal,https://github.com/shaderwitch/UE4Minimal,314,29,,My Minimal Dark Theme for Unreal Engine 4
+drichardson/UnrealEngineExamples,https://github.com/drichardson/UnrealEngineExamples,311,62,, Unreal Engine Example projects. Includes UE4 and UE5 examples.
+pfist/Nano,https://github.com/pfist/Nano,308,17,,A tiny template for tiny Unreal games.
+asqbtcupid/unreal.lua,https://github.com/asqbtcupid/unreal.lua,306,97,,lua solution for UnrealEngine4
+GDi4K/unreal-openland,https://github.com/GDi4K/unreal-openland,305,67,,"Landscape AutoMaterial for UnrealEngine with some related Tools for RVT, etc."
+vahabahmadvand/ActionRPG_UE5,https://github.com/vahabahmadvand/ActionRPG_UE5,305,64,,"An Action RPG sample project is upgraded to the latest Unreal Engine, It works with UE 5.3+. It is a great learning resource for GAS (Gameplay Ability System)"
+ufna/VaOcean,https://github.com/ufna/VaOcean,304,135,,[DEPRECATED] Ocean Surface Simulation Plugin for Unreal Engine 4
+sketchfab/unreal-plugin,https://github.com/sketchfab/unreal-plugin,303,37,,
+devdad/SimplexNoise,https://github.com/devdad/SimplexNoise,302,65,,"* This is a clean, fast, modern and free Perlin Simplex noise function.All Public Functions are BlueprintCallable so they can be used in every blueprint. From DevDad and Dedicated to you and Unreal Co..."
+TheNewJavaman/unreal-vr,https://github.com/TheNewJavaman/unreal-vr,299,23,,Adds virtual reality support to flatscreen Unreal Engine games
+adynathos/AugmentedUnreality,https://github.com/adynathos/AugmentedUnreality,298,112,,Augmented reality for Unreal Engine 4
+sideeffects/HoudiniEngineForUnreal-v2,https://github.com/sideeffects/HoudiniEngineForUnreal-v2,298,77,,Houdini Engine Plugin for Unreal Engine 4 - Version 2
+gtreshchev/RuntimeSpeechRecognizer,https://github.com/gtreshchev/RuntimeSpeechRecognizer,298,50,,"Cross-platform, real-time, offline speech recognition plugin for Unreal Engine. Based on Whisper OpenAI technology, whisper.cpp."
+RedPandaProjects/UnrealEngine,https://github.com/RedPandaProjects/UnrealEngine,297,80,,UnrealEngine 1998
+DaveFace/UnrealRetroShaders,https://github.com/DaveFace/UnrealRetroShaders,297,39,,Retro PS1 Post Processing for Unreal Engine 4.
+RVillani/UE4Duino,https://github.com/RVillani/UE4Duino,293,73,,Unreal Engine 4 plugin for COM communication on Windows
+windystrife/UnrealEngine_NVIDIAGameWorks,https://github.com/windystrife/UnrealEngine_NVIDIAGameWorks,291,178,,"This repository contains stable builds of several Nvidia technology merged together in Unreal Engine 4.18.3 - Visual Studio 2015 Recommended* Note: Wavework usage requires CUDA cores, which means Nvid..."
+ncsoft/React-UMG,https://github.com/ncsoft/React-UMG,291,38,,A React renderer for Unreal Motion Graphics With Unreal.js
+code4game/glTFForUE4,https://github.com/code4game/glTFForUE4,289,55,,Import glTF 2.0 in Unreal Engine 4 & 5
+drstreit/unreal_schematics,https://github.com/drstreit/unreal_schematics,288,52,,Schematics from Unreal official training at https://learn.unrealengine.com/home/LearningPath/113226
+Adriwin06/Ultimate-CommonUI-Menu-System,https://github.com/Adriwin06/Ultimate-CommonUI-Menu-System,286,37,,"This project provide the Ultimate Modular Menu System for Unreal Engine 5 using Common UI where everything is easy to reuse/build on. For the options menu, there is everything you need from basic scal..."
+ultraleap/UnrealPlugin,https://github.com/ultraleap/UnrealPlugin,279,74,,Ultraleap SDK for the Unreal Engine.
+google-ar/arcore-unreal-sdk,https://github.com/google-ar/arcore-unreal-sdk,278,119,,ARCore SDK for Unreal
+skymapgames/jenkins-ue4,https://github.com/skymapgames/jenkins-ue4,278,79,,Automated Unreal Engine 4 Project Builds
+JoshRBogart/unreal_tools,https://github.com/JoshRBogart/unreal_tools,277,97,,Blender 3D scripts for storing vertex data for use in a vertex shader.
+UE-Explorer/UE-Explorer,https://github.com/UE-Explorer/UE-Explorer,275,41,,UnrealScript decompiler and explorer tool for Unreal Engine packages.
+microsoft/OnnxRuntime-UnrealEngine,https://github.com/microsoft/OnnxRuntime-UnrealEngine,274,45,,Apply a Style Transfer Neural Network in real time with Unreal Engine 5 leveraging ONNX Runtime.
+midgen/UnrealFastNoise,https://github.com/midgen/UnrealFastNoise,273,66,,"Modular, Blueprint-friendly noise generation for UE4"
+chrisloop/Unreal5_ToonShader,https://github.com/chrisloop/Unreal5_ToonShader,273,41,,
+Deema35/Climbing-Movement-Component,https://github.com/Deema35/Climbing-Movement-Component,271,71,,Climbing Movement Component  for Unreal Engine.
+Allar/compiling-unreal,https://github.com/Allar/compiling-unreal,271,19,,A man's notes as he discovers how Unreal Engine compiles things
+JonasReich/OpenUnrealUtilities,https://github.com/JonasReich/OpenUnrealUtilities,269,21,,Open Unreal Utilities - Open Source Utilties for Unreal Engine
+getnamo/NodeJs-Unreal,https://github.com/getnamo/NodeJs-Unreal,268,38,,Embed node.js as an Unreal Engine plugin.
+ncsoft/Unreal.js-core,https://github.com/ncsoft/Unreal.js-core,267,117,,Unreal.js plugin submodule
+Cosys-Lab/Cosys-AirSim,https://github.com/Cosys-Lab/Cosys-AirSim,267,93,,"AirSim is a simulator for drones, cars and more, built on Unreal Engine. We expand it with new implementations and sensor modalities."
+RyensX/UnrealFabAssistant,https://github.com/RyensX/UnrealFabAssistant,265,25,,把Fab商城所有免费资源一键入库/Automatically add all free resources from Fab to your account
+videofeedback/Unreal_Engine_SerialCOM_Plugin,https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin,265,50,,Serial Com Port Library for Unreal Engine 4 and Unreal Engine 5
+Mystfit/Unreal-StableDiffusionTools,https://github.com/Mystfit/Unreal-StableDiffusionTools,265,31,,Animate Unreal Engine scenes using Stable Diffusion
+adamrehn/ue4cli,https://github.com/adamrehn/ue4cli,264,47,,Command-line interface for Unreal Engine 4
+octobuild/octobuild,https://github.com/octobuild/octobuild,264,23,,Compiler cache for Unreal Engine
+VSZue/DonAINavigation,https://github.com/VSZue/DonAINavigation,264,119,,This plugin provides a 3D dynamic pathfinding system for use with Unreal Engine 4. It's primarly designed for Flying AI creatures based in dynamic or procedural worlds that need to solve complex pathf...
+gradientspace/UnrealMeshProcessingTools,https://github.com/gradientspace/UnrealMeshProcessingTools,260,70,,Sample Projects/Plugins for Mesh Processing in Unreal Engine
+JsonAsAsset/JsonAsAsset,https://github.com/JsonAsAsset/JsonAsAsset,260,45,,Powerful Unreal Engine Plugin that imports assets from FModel
+HorizonGamesRoland/ActorIO,https://github.com/HorizonGamesRoland/ActorIO,260,21,,Source Engine inspired level scripting tool for Unreal Engine featuring an input/output system for actors.
+kestrelm/Creature_UE4,https://github.com/kestrelm/Creature_UE4,259,70,,"Unreal Engine 4 Runtimes for Creature, the 2D Skeletal + Mesh Animation Tool"
+binary-husky/unreal-map,https://github.com/binary-husky/unreal-map,257,38,,Multiagent research environment toolbox based on Unreal Engine
+HoussineMehnik/UE4-EditorScriptingToolsPlugin,https://github.com/HoussineMehnik/UE4-EditorScriptingToolsPlugin,257,36,,Extend and customize some part the Unreal Editor using Blueprints. The plugin comes with some basic tools samples.
+TimmHess/UnrealImageCapture,https://github.com/TimmHess/UnrealImageCapture,255,57,,A small tutorial repository on capturing images with semantic annotation from UnrealEngine to disk.
+Esri/cityengine_for_unreal,https://github.com/Esri/cityengine_for_unreal,254,44,,ArcGIS CityEngine for Unreal Engine brings the powerful CityEngine procedural modeling capabilities to Unreal Engine.
+Deams51/CoverGenerator-UE4,https://github.com/Deams51/CoverGenerator-UE4,253,66,,A dynamic cover point generator plugin for Unreal Engine 4.
+Jyouhou/UnrealText,https://github.com/Jyouhou/UnrealText,251,39,,Synthetic Scene Text from 3D Engines
+NoxWings/Cable-Component,https://github.com/NoxWings/Cable-Component,249,34,,Unity cable component implementation similar to the Unreal Engine one based on verlet integration.
+DruidMech/UE4-CPP-Shooter-Series,https://github.com/DruidMech/UE4-CPP-Shooter-Series,245,95,,Unreal Engine C++ Shooter Series Project
+EZFNDEV/UEAESKeyFinder,https://github.com/EZFNDEV/UEAESKeyFinder,245,43,,This tool can find the AES Key of probably any Unreal Engine game
+splash-damage/coding-standards,https://github.com/splash-damage/coding-standards,245,42,,The C++/Unreal Engine 4 coding guidelines and techniques applied at Splash Damage
+donaldwuid/unreal_source_explained,https://github.com/donaldwuid/unreal_source_explained,243,30,,"Unreal source explained, based on profilers."
+Soverance/EtherealLegends,https://github.com/Soverance/EtherealLegends,243,52,,"Ethereal Legends - An Indie Action RPG built with Unreal Engine 4 for Steam, PS4, and Xbox One."
+SpeculativeCoder/UnrealEngine-HTML5-ES3,https://github.com/SpeculativeCoder/UnrealEngine-HTML5-ES3,241,80,,Unreal Engine 4.27 HTML5 ES3 (WebGL 2) & 4.24 HTML5 ES2 (WebGL 1)
+heroiclabs/nakama-unreal,https://github.com/heroiclabs/nakama-unreal,241,73,,Unreal client for Nakama server.
+thejinchao/turbolink,https://github.com/thejinchao/turbolink,239,71,,TurboLink is an unreal engine plugin enables Google gRPC work with Unreal Engine using C++ and Blueprint
+ue4plugins/TextAsset,https://github.com/ue4plugins/TextAsset,239,69,,Unreal Engine 4 plug-in that adds a text asset and editor for personal notes.
+DaedalicEntertainment/ue4-test-automation,https://github.com/DaedalicEntertainment/ue4-test-automation,238,67,,Facilitates setting up integration test suits with Unreal Engine 4 Gauntlet.
+facebookresearch/PUG,https://github.com/facebookresearch/PUG,237,11,,This is the repository for the Photorealistic Unreal Graphics (PUG) datasets for representation learning.
+daftsoftware/StarterProject,https://github.com/daftsoftware/StarterProject,236,19,,"A lightweight uproject that debloats Unreal Engine, reducing package size and increasing editor and game performance."
+RussellJerome/UnrealModLoader,https://github.com/RussellJerome/UnrealModLoader,235,72,,
+bakjos/FFMPEGMedia,https://github.com/bakjos/FFMPEGMedia,232,65,,Unreal FFMPEG Plugin to support more video formats and alpha videos
+WPFDevelopersOrg/XNode,https://github.com/WPFDevelopersOrg/XNode,232,75,,可视化程序编辑器，类似虚幻引擎的蓝图。A visual programming editor similar to Unreal Engine's Blueprint.
+AlexQuevillon/UnrealPythonLibrary,https://github.com/AlexQuevillon/UnrealPythonLibrary,231,72,,A Pipeline Oriented Python Function Library - Feel free to use any of this in your projects
+fairygui/FairyGUI-unreal,https://github.com/fairygui/FairyGUI-unreal,231,38,,A flexible UI framework for Unreal Engine
+MJx0/iOS_UEDumper,https://github.com/MJx0/iOS_UEDumper,231,66,,MobileSubstrate tweak to dump iOS unreal engine games
+ElgSoft/ElgEditorScripting,https://github.com/ElgSoft/ElgEditorScripting,229,36,,ElgEditorScripting is an Unreal Engine 5 editor only plugin created to extend the possibilities of Editor Utility Widgets. 
+fmod/fmod-for-unreal,https://github.com/fmod/fmod-for-unreal,228,90,,FMOD Studio integration with Unreal.
+getnamo/ZipUtility-Unreal,https://github.com/getnamo/ZipUtility-Unreal,228,48,,Event driven 7zip utility plugin for the Unreal Engine.
+slowburn-dev/DataConfig,https://github.com/slowburn-dev/DataConfig,228,39,,Unreal Engine JSON/MsgPack serialization framework
+chexiongsheng/puerts_unreal_demo,https://github.com/chexiongsheng/puerts_unreal_demo,226,87,,unreal demo for puerts
+angelhodar/OpenRPG_Inventory,https://github.com/angelhodar/OpenRPG_Inventory,226,50,,Generic and fully featured multipurpose inventory container and equipment system for Unreal Engine 4
+RyroNZ/UE4MasterServer,https://github.com/RyroNZ/UE4MasterServer,226,72,,"This is a plugin for Unreal Engine 4 that adds server registration, deregistration etc with a master server."
+getnamo/TensorFlow-Unreal-Examples,https://github.com/getnamo/TensorFlow-Unreal-Examples,224,45,,Drag and drop Unreal Engine TensorFlow examples repository.
+Rexocrates/Vertex_Anim_Toolset,https://github.com/Rexocrates/Vertex_Anim_Toolset,223,52,,Unreal Engine tools for baking Skeletal Mesh animation into textures to animate meshes through the material shader
+ryanjon2040/RTS-Community-Project,https://github.com/ryanjon2040/RTS-Community-Project,222,100,,Lets build an RTS Game with Unreal Engine 4!
+Noesis/UE4-ShooterGame,https://github.com/Noesis/UE4-ShooterGame,221,79,,ShooterGame using Unreal and NoesisGUI
+VesCodes/ImGui,https://github.com/VesCodes/ImGui,221,41,,ImGui plugin for Unreal Engine
+wlxklyh/SoftRenderer,https://github.com/wlxklyh/SoftRenderer,220,29,,Soft Renderer软渲染器：安卓工程师、iOS工程师、Unity工程师、Unreal工程师、Java工程师、C++工程师、C#工程师可以通过此来快速深刻理解渲染管线
+TheNaeem/Unreal-Mappings-Archive,https://github.com/TheNaeem/Unreal-Mappings-Archive,218,72,,A collection of mapping (usmap) files that can be used to datamine Unreal Engine games.
+cursey/ue4genny,https://github.com/cursey/ue4genny,218,71,,An Unreal Engine 4 SDK generator using SdkGenny
+ydrive/EasySynth,https://github.com/ydrive/EasySynth,218,32,,Unreal Engine plugin for easy creation of synthetic image datasets
+ufna/VaFogOfWar,https://github.com/ufna/VaFogOfWar,218,57,,A clear and simple solution of Fog of War for Unreal Engine 4
+lucoiso/UEHttpGPT,https://github.com/lucoiso/UEHttpGPT,217,57,,"HttpGPT is an Unreal Engine plugin that facilitates integration with OpenAI's GPT based services (ChatGPT and DALL-E) through asynchronous REST requests, making it easy for developers to communicate w..."
+ValentinKraft/UE4_GPUPointCloudRenderer,https://github.com/ValentinKraft/UE4_GPUPointCloudRenderer,216,55,,A GPU-powered Point Cloud Renderer for Unreal.
+UnrealCourse/04_BattleTank,https://github.com/UnrealCourse/04_BattleTank,216,281,,"An open-world head-to-head tank fight with simple AI, terrain, and advanced control system in Unreal 4. (ref: BT_URC) http://gdev.tv/urcgithub"
+robinwood3d/UnrealTransformGizmo,https://github.com/robinwood3d/UnrealTransformGizmo,215,54,,Unreal Engine 交互式Transform工具
+vinjn/pkg-doctor,https://github.com/vinjn/pkg-doctor,215,36,,包体医生，Unity 及 Unreal 游戏包体优化工具
+CesiumGS/cesium-unreal-samples,https://github.com/CesiumGS/cesium-unreal-samples,214,51,,Getting Started Sample Project for Cesium for Unreal
+lucoiso/UEAzSpeech,https://github.com/lucoiso/UEAzSpeech,213,51,,This plugin integrates Azure Speech Cognitive Services in Unreal Engine.
+hiperbou/kotlin-unreal,https://github.com/hiperbou/kotlin-unreal,211,14,,kotlin-unreal: Use the amazing Kotlin language with Unreal Engine 4 and 5
+mitchemmc/UE4FirstPersonVRTemplate,https://github.com/mitchemmc/UE4FirstPersonVRTemplate,210,76,,A first person template for unreal engine 4 focused on VR and use with the Oculus Rift
+cdpred/RedTalaria,https://github.com/cdpred/RedTalaria,209,14,,An Unreal Engine plugin providing a set of Hermes endpoints.
+gtreshchev/RuntimeFilesDownloader,https://github.com/gtreshchev/RuntimeFilesDownloader,208,50,,Runtime Files Downloader plugin for Unreal Engine. Downloading files over HTTP / HTTPS at runtime.
+oculus-samples/Unreal-HandGameplay,https://github.com/oculus-samples/Unreal-HandGameplay,207,71,,Oculus showcase of hand tracking based interactions in Unreal.
+shadowmint/ue4-static-plugin,https://github.com/shadowmint/ue4-static-plugin,206,29,,A sample static plugin for the unreal engine that imports a C++ and rust library and links them statically.
+gwihlidal/QNodeView,https://github.com/gwihlidal/QNodeView,205,38,,"Qt5 suite that supports displaying and editing nodes in a graph-like flow. Similar to Unreal Kismet, Frostbite 3 Schematics or Allegorithmic Substance Designer UIs."
+ymt3d/UE5-StylizedPostProcess,https://github.com/ymt3d/UE5-StylizedPostProcess,204,12,,Stylized Post Process for Unreal Engine 5
+1runeberg/RunebergVRPlugin,https://github.com/1runeberg/RunebergVRPlugin,204,60,,"Unreal Engine Blueprint & C++  VR interaction functions (pre-configured VR Pawn  & Grab/Push/Pull, Move, Teleport, Gestures recording & recognition component) for your VR projects. Get up & running qu..."
+cenairaclub/motionmatchingreplicated,https://github.com/cenairaclub/motionmatchingreplicated,202,53,,Unreal Engine 5 Motion Matching Sample REPLICATED
+ashe23/ProjectCleaner,https://github.com/ashe23/ProjectCleaner,201,33,,Unreal engine plugin for managing all unused assets and empty folders in project.
+brifsttar/OpenDRIVE,https://github.com/brifsttar/OpenDRIVE,200,32,,Unreal Engine OpenDRIVE plugin
+boocs/unreal-clangd,https://github.com/boocs/unreal-clangd,200,15,,VSCode extension for Unreal and clangd
+DaedalicEntertainment/ue4-orders-abilities,https://github.com/DaedalicEntertainment/ue4-orders-abilities,200,60,,"Sample code of the talk ""Hero AI: Gameplay Abilities Meet Behaviour Trees"" at Unreal Fest Europe 2019."
+Ryan-DowlingSoka/RedTechArtTools,https://github.com/Ryan-DowlingSoka/RedTechArtTools,200,25,,Unreal Engine 5 Plugin for a variety of Tech Art Tools and features.
+electronicarts/texturesets,https://github.com/electronicarts/texturesets,200,27,,"Texture Sets is a plugin developed by SEED for Unreal Engine 5, and provides an opt-in framework for building advanced, streamlined texture pipelines."
+splash-damage/future-extensions,https://github.com/splash-damage/future-extensions,199,30,,Unreal Engine plugin for async task programming
+mik14a/VOX4U,https://github.com/mik14a/VOX4U,197,40,,MagicaVoxel VOX Format import plugin for Unreal Engine 5
+lucoiso/UEProject_Elementus,https://github.com/lucoiso/UEProject_Elementus,197,50,,A template that can be used to start projects that will use some new features that come with Unreal Engine 5 as well as powerful existing features like the GAS and others.
+TREE-Ind/Unreal-Agent,https://github.com/TREE-Ind/Unreal-Agent,196,28,,A collection of Unreal Engine 5 Editor Utility widgets powered by GPT3/4
+AyoubKhammassi/CustomMeshComponent,https://github.com/AyoubKhammassi/CustomMeshComponent,196,42,,The minimal source code for creating a custom mesh component and using it in Unreal Engine 4. This is an example project published with a series of articles that cover the topic.
+Coop56/awesome-unreal,https://github.com/Coop56/awesome-unreal,194,13,,Awesome Unreal Engine 5
+heyomidk/HardReferenceFinder,https://github.com/heyomidk/HardReferenceFinder,192,13,,"A free, open-source Unreal Engine editor plugin for identifying hard references in a blueprint graph."
+jorgenpt/Hermes,https://github.com/jorgenpt/Hermes,191,24,,An Unreal Engine plugin that allows direct (deep) links into the Unreal editor
+rm-NoobInCoding/UnrealReZen,https://github.com/rm-NoobInCoding/UnrealReZen,190,18,,UnrealReZen is a modding tool for packing utoc and ucas files (Unreal Engine IoStore archive files)
+AyumaxSoft/ObjectDeliverer,https://github.com/AyumaxSoft/ObjectDeliverer,189,38,,"ObjectDeliverer is a data transmission / reception library for Unreal Engine (C ++, Blueprint). "
+Dimev/Realistic-Atmosphere-Godot-and-UE4,https://github.com/Dimev/Realistic-Atmosphere-Godot-and-UE4,189,24,,A realistic atmosphere material for both the Godot game engine and Unreal Engine 4
+BabylonJS/BabylonToolkit,https://github.com/BabylonJS/BabylonToolkit,188,46,,Home of the community maintained Unity & Unreal exporters for Babylon.js
+h4lfheart/UEFormat,https://github.com/h4lfheart/UEFormat,188,29,,A general purpose 3D exchange format for Unreal Engine asset extraction
+GameTechDev/XeSSUnrealPlugin,https://github.com/GameTechDev/XeSSUnrealPlugin,188,9,,Intel® XeSS Plugin for Unreal* Engine
+Henry00IS/DynamicLighting,https://github.com/Henry00IS/DynamicLighting,188,13,,Modernized Lighting System of Unreal Gold / Tournament (1996-1999) for Unity.
+DaedalicEntertainment/third-person-camera,https://github.com/DaedalicEntertainment/third-person-camera,188,46,,"Sample code of the talk ""Six Ingredients for a Dynamic Third-Person Camera"" at Unreal Fest Europe 2018."
+betidestudio/SteamIntegrationKit,https://github.com/betidestudio/SteamIntegrationKit,188,38,,The most ultimate Steam plugin with complete support of Blueprints with support for Unreal Engine 5.2 and above
+pruttned/owl-bt,https://github.com/pruttned/owl-bt,188,28,,"owl-bt is editor for Behavior trees. It has been inspired by Unreal engine behavior trees in a way, that it supports special node items like decorators and services. This makes trees smaller and much ..."
+trafalmejo/OSCAR,https://github.com/trafalmejo/OSCAR,187,7,,"OSCAR is a tool to create beautiful graphic user interaces (GUIs) to send OSC messages and control interactive installations (Resolume arena, Touch Designer, Ableton, Processing, PD, UNITY, Unreal, et..."
+PreyK/Unreal-Minimum-Viable-Flecs,https://github.com/PreyK/Unreal-Minimum-Viable-Flecs,185,22,,Minimum viable Flecs entity component system implementation in Unreal Engine.
+gameDNAstudio/MobileUtils,https://github.com/gameDNAstudio/MobileUtils,185,52,,A plugin for Unreal Engine 4 that lets you integrate mobile utilities into your project.
+liamkf/Unreal_FASTBuild,https://github.com/liamkf/Unreal_FASTBuild,183,67,,Allows UnrealEngine to be built with FASTBuild for VS2015/VS2017 and Windows 10.
+DruidMech/LearnCPPForUnrealEngineUnit2,https://github.com/DruidMech/LearnCPPForUnrealEngineUnit2,182,64,,Assets for the Unreal Engine Tutorial Series
+GlassBeaver/CoverSystem,https://github.com/GlassBeaver/CoverSystem,182,57,,Real-Time Dynamic Cover System for Unreal Engine 4
+darbycostello/Nav3D,https://github.com/darbycostello/Nav3D,182,40,,"3D Pathfinding system plugin for Unreal Engine 5.6, using Sparse Voxel Octrees. Now overhauled for UE5 with optimisations and tactical reasoning"
+ValveSoftware/steamvr_unreal_plugin,https://github.com/ValveSoftware/steamvr_unreal_plugin,181,30,,SteamVR Input Unreal Plugin - Documentation at: https://github.com/ValveSoftware/steamvr_unreal_plugin/wiki       Sample project (UE4.15-4.23):    https://github.com/ValveSoftware/steamvr_unreal_plugi...
+tommybazar/TBRaymarchProject,https://github.com/tommybazar/TBRaymarchProject,179,47,,Allows volumetric rendering of 3D data with Unreal Engine.
+hacoo/rtik,https://github.com/hacoo/rtik,178,36,,Comprehensive inverse kinematics system for Unreal Engine 4
+AyoubKhammassi/CustomComputeShaders,https://github.com/AyoubKhammassi/CustomComputeShaders,178,41,,The minimal source code for adding and using a custom compute shader in Unreal Engine 4
+Autodesk/LiveLink,https://github.com/Autodesk/LiveLink,177,48,,An Unreal Live Link  plugin for Autodesk Maya 
+anasrar/Blender-UE4-Workspace,https://github.com/anasrar/Blender-UE4-Workspace,177,38,,Blender add-on for better workflow with unreal engine 4
+zsibot/matrix,https://github.com/zsibot/matrix,176,16,,"MATRiX is an advanced simulation platform that integrates MuJoCo, Unreal Engine 5, and CARLA to provide high-fidelity, interactive environments for robotics research. "
+NinevaStudios/mqtt-utilities-unreal,https://github.com/NinevaStudios/mqtt-utilities-unreal,175,65,,MqttUtilities is a plugin for Unreal Engine intended to expose MQTT client functionality to blueprints
+AleDel/Spout-UE4,https://github.com/AleDel/Spout-UE4,175,81,,Spout Plugin for Unreal Engine
+daz3d/DazToUnreal,https://github.com/daz3d/DazToUnreal,175,52,,Daz to Unreal Bridge
+A57R4L/SceneViewExtensionTemplate,https://github.com/A57R4L/SceneViewExtensionTemplate,175,15,,Unreal Engine 5 plugin template for adding custom rendering pass to the engine with a SceneViewExtension
+DoubleDeez/MDMetaDataEditor,https://github.com/DoubleDeez/MDMetaDataEditor,175,23,,"Unreal Engine 5.1+ plugin to enable editing meta data of Blueprint Properties, Functions, and Function and Event Parameters"
+vizor-games/InfraworldRuntime,https://github.com/vizor-games/InfraworldRuntime,173,56,,A solution that enables Unreal Engine 4 to work with Google gRPC services from either C++ or Blueprints.
+Gvgeo/Pivot-Painter-for-Blender,https://github.com/Gvgeo/Pivot-Painter-for-Blender,173,31,,"Pivot Painter is a Blender addon to create a 3d model, that will use the Pivot Painter Tool's shaders in Unreal Engine 4"
+PacktPublishing/Game-Development-Projects-with-Unreal-Engine,https://github.com/PacktPublishing/Game-Development-Projects-with-Unreal-Engine,172,86,,Learn to build your first games and bring your ideas to life using UE4 and C++
+life-exe/UnrealOpenAIPlugin,https://github.com/life-exe/UnrealOpenAIPlugin,171,35,,
+microsoft/Microsoft-OpenXR-Unreal,https://github.com/microsoft/Microsoft-OpenXR-Unreal,171,51,,An Unreal Engine game plugin providing additional features available on Microsoft's Mixed Reality devices like the HoloLens 2 when using OpenXR.
+irajsb/UE4_Assimp,https://github.com/irajsb/UE4_Assimp,171,42,,Assimp mesh importer for Unreal Engine
+FaceFX/FaceFX-UE4,https://github.com/FaceFX/FaceFX-UE4,169,63,,The FaceFX Unreal Engine 4 plugin.
+JimmieKJ/unrealTournament,https://github.com/JimmieKJ/unrealTournament,168,95,,unrealTournament game
+WistfulHopes/NightSkyEngine,https://github.com/WistfulHopes/NightSkyEngine,168,48,,A fighting game framework written in Unreal Engine
+strangergwenn/AstralShipwright,https://github.com/strangergwenn/AstralShipwright,168,21,,"ASTRAL SHIPWRIGHT / Full game sources for Astral Shipwright, a space sim made with Unreal Engine 5"
+microdee/OpenUnrealSpaceMouse,https://github.com/microdee/OpenUnrealSpaceMouse,167,23,,"Control Viewport cameras with 3DConnexion SpaceMice, using HID directly."
+MiloMindbender/UE4VirtualProduction,https://github.com/MiloMindbender/UE4VirtualProduction,167,35,,An example Unreal Engine Virtual Production Project
+ScottRaffertyCG/MaterialVault,https://github.com/ScottRaffertyCG/MaterialVault,167,15,,Original repo for MaterialVault Unreal Engine Plugin
+DarknessFX/RaylibUE,https://github.com/DarknessFX/RaylibUE,167,7,,Bridge Raylib's easy-to-use drawing API with Unreal Engine's intuitive Blueprint nodes.
+ue4plugins/MobuLiveLink,https://github.com/ue4plugins/MobuLiveLink,166,56,,Plugin for MotionBuilder that send data to Unreal Engine
+TekkaGB/Unverum,https://github.com/TekkaGB/Unverum,166,38,,Downloads and install mods for several Unreal Engine 4 games.
+boocs/ue4-intellisense-fixes,https://github.com/boocs/ue4-intellisense-fixes,166,11,,Automatically fixes VSCode/Unreal Engine Intellisense Config bugs on startup
+ibbles/LearningUnreal,https://github.com/ibbles/LearningUnreal,165,15,,A bunch of notes and code snippets that I write while figuring out how to use the Unreal Engine.
+JaredP94/Unreal-Development-Guides-and-Tips,https://github.com/JaredP94/Unreal-Development-Guides-and-Tips,165,19,,"High-level concept explanations, detailed tutorials, performance considerations, shortcuts and other useful content that aims to improve your Unreal Engine 4 development journey."
+kwstasg/WAC,https://github.com/kwstasg/WAC,165,47,,UE5 Visualization Plugin - Windows Audio Capture (WAC) is an Unreal Engine 5 plugin that captures live audio from the windows default audio device and analyse it to frequency values. 
+fastlorisstudios/UE4_EOS_Plugin,https://github.com/fastlorisstudios/UE4_EOS_Plugin,164,40,,"A plugin and sample project, built for Unreal Engine 4, that implements the Epic Online Services SDK"
+Hazelight/vscode-unreal-angelscript,https://github.com/Hazelight/vscode-unreal-angelscript,162,69,,Visual Studio Code Language Server and Debug Adapter for use with UnrealEngine-Angelscript.
+nakdeyes/UnrealImGuiTools,https://github.com/nakdeyes/UnrealImGuiTools,162,17,,A set of tools and utilities for use with Unreal Engine projects using ImGui.
+bw2012/UE5VoxelTerrainDemo,https://github.com/bw2012/UE5VoxelTerrainDemo,162,34,,Unreal Engine 5: Smooth voxel terrian example
+blueprintue/uasset-reader-js,https://github.com/blueprintue/uasset-reader-js,162,25,,Read and extract informations of .uasset files from Unreal Engine in javascript.
+mattyman174/GenericItemization,https://github.com/mattyman174/GenericItemization,162,20,,"A flexible Unreal Engine plugin that provides generic Item and Affix generation, utilizing DataTables and Instanced Structs."
+jollymonsterstudio/Unreal-Engine-Fundamentals,https://github.com/jollymonsterstudio/Unreal-Engine-Fundamentals,159,46,,Collection of small projects going over various Unreal Engine C++ Fundamentals
+amrshaheen61/UE4LocalizationsTool,https://github.com/amrshaheen61/UE4LocalizationsTool,159,25,,simple tool to edit unreal engine 4 text files
+oculus-samples/Unreal-SharedSpaces,https://github.com/oculus-samples/Unreal-SharedSpaces,158,71,,"Oculus multiplayer showcase demonstrating basic multiplayer functionality in Unreal, including Oculus Platform Social APIs, Photon as the transport layer and UE replication. The Oculus SDK and other s..."
+PushkinStudio/PsRealVehicle,https://github.com/PushkinStudio/PsRealVehicle,158,35,,Plugin for Unreal Engine 4 with simple force-driven vehicle simulation
+sinbad/SUQS,https://github.com/sinbad/SUQS,157,30,,Steve's Unreal Quest System: data-driven quest system for Unreal Engine
+sinbad/SUDS,https://github.com/sinbad/SUDS,157,30,,Steve's Unreal Dialogue System
+shanecolb/sphinx-ue4,https://github.com/shanecolb/sphinx-ue4,157,80,,"A speech recognition plugin for Unreal Engine 4. This is essentially a port of Pocketsphinx, to be used within an Unreal Engine project."
+hollsteinm/ReasonablePlanningAI,https://github.com/hollsteinm/ReasonablePlanningAI,157,28,,Designer Driven Unreal Engine 4 & 5 - UE4 / UE5 - AIModule Extension Plugin using Data Driven Design for Utility AI and Goal Oriented Action Planning - GOAP
+orig74/DroneSimLab,https://github.com/orig74/DroneSimLab,156,34,,SITL ArduCopter & PX4  with Unreal Engine 4  Simulation framework
+sinbad/UEScripts,https://github.com/sinbad/UEScripts,155,12,,Helper scripts for Unreal Engine
+panzi/rust-u4pak,https://github.com/panzi/rust-u4pak,155,12,,"unpack, pack, list, check and mount Unreal Engine 4 .pak archives"
+zxcvbnmkl112/UnrealDbg,https://github.com/zxcvbnmkl112/UnrealDbg,154,170,,一个基于VT的开源调试器 界面是delphi编写
+Italink/GaussianSplattingForUnrealEngine,https://github.com/Italink/GaussianSplattingForUnrealEngine,154,30,,Gaussian Splatting Unreal Engine Plugin: Convert primitives into 3D Gaussians
+howaajin/graphformatter,https://github.com/howaajin/graphformatter,154,28,,Graph nodes layout tool for Unreal Engine
+MaddyOff/ue4-canvas-gui,https://github.com/MaddyOff/ue4-canvas-gui,154,38,,It's a simple Canvas GUI for Unreal Engine 4 with mouse operation
+OlafHaag/VectorFields,https://github.com/OlafHaag/VectorFields,154,21,,Scripts to create vector fields and flow maps that can be used in Unreal Engine 4 or Unity 3D for particle VFX.
+channeldorg/channeld-ue-plugin,https://github.com/channeldorg/channeld-ue-plugin,154,40,,Enables distributed simulation with Unreal Engine's dedicated servers. 为虚幻引擎专用服务器提供分布式模拟能力的开源插件.
+Arisego/UnrealLive2D,https://github.com/Arisego/UnrealLive2D,153,25,,UE4 plugin for live2d model
+guitarfreak/PropertyWatcher,https://github.com/guitarfreak/PropertyWatcher,153,11,,A runtime variable watch window for Unreal Engine using ImGui.
+SRombauts/UEPlasticPlugin,https://github.com/SRombauts/UEPlasticPlugin,152,30,,Plastic SCM Plugin for Unreal Engine
+Synock/UE5Inventory,https://github.com/Synock/UE5Inventory,152,27,,Replicated inventory system for unreal engine 5
+hugoattal/OrbitalMarket,https://github.com/hugoattal/OrbitalMarket,152,14,,Enhanced marketplace platform for the Unreal Engine marketplace
+sirjofri/SlateStyleBrowser,https://github.com/sirjofri/SlateStyleBrowser,151,15,,Unreal Slate Style Browser
+getsentry/sentry-unreal,https://github.com/getsentry/sentry-unreal,150,52,,Unreal Engine
+flopperam/unreal-engine-mcp,https://github.com/flopperam/unreal-engine-mcp,150,35,,"Control Unreal Engine 5.5+ through AI with natural language. Build incredible 3D worlds and architectural masterpieces using MCP. Create entire towns, medieval castles, modern mansions, challenging ma..."
+LouisRaverdy/DiscordRPC,https://github.com/LouisRaverdy/DiscordRPC,149,22,,"A Unreal Engine plugin for making presence,  invite, join and spectating with Discord."
+getnamo/MachineLearningRemote-Unreal,https://github.com/getnamo/MachineLearningRemote-Unreal,148,40,,"Machine Learning plugin for the Unreal Engine, encapsulating calls to remote python servers running e.g. Tensorflow/Pytorch."
+blueroseslol/BRPlugins,https://github.com/blueroseslol/BRPlugins,148,38,,a simple unreal engine 4 plugins.
+deepdrive/deepdrive-sim,https://github.com/deepdrive/deepdrive-sim,147,43,,Deepdrive Unreal project and Python bindings
+bralkor/unreal_python_recipe_book,https://github.com/bralkor/unreal_python_recipe_book,147,14,,A Recipe Book on ways to use Python in Unreal Engine 5 written by Brian Kortbus
+UnrealCourse/03_BuildingEscape,https://github.com/UnrealCourse/03_BuildingEscape,147,184,,"A simple First Person game to learn level building, lighting, Unreal Editor, C++ game logic, basic Blueprint and more. (ref: BE_URC) http://gdev.tv/urcgithub"
+JetBrains/UnrealLink,https://github.com/JetBrains/UnrealLink,146,29,,
+Phyronnaz/UECompileTimesVisualizer,https://github.com/Phyronnaz/UECompileTimesVisualizer,146,14,,Debug compile times in Unreal Engine & MSVC projects
+bananaturtlesandwich/stove,https://github.com/bananaturtlesandwich/stove,146,17,,an editor for cooked unreal engine 4/5 maps
+newjoker6/Asset-Drawer,https://github.com/newjoker6/Asset-Drawer,146,7,,"Moves the FileDock to the bottom of the screen, similar to Unity and Unreal. You can also use the shortcut key to show and hide it."
+leixingyu/unrealStylesheet,https://github.com/leixingyu/unrealStylesheet,145,16,,An Unreal Engine 5 look QT stylesheet
+nikrich/unreal-assets,https://github.com/nikrich/unreal-assets,144,30,,Free Assets for Unreal Engine
+delgoodie/Zippy,https://github.com/delgoodie/Zippy,144,39,,Demo Project for Unreal Engine Tutorials
+trdwll/SteamBridge,https://github.com/trdwll/SteamBridge,144,22,,An Unreal Engine implementation of the Steamworks API. 
+wangjieest/GenericMessagePlugin,https://github.com/wangjieest/GenericMessagePlugin,144,24,,A complete event system solution for Unreal Engine : Send or Receive Message everywhere! 
+cindustries/unreal-directory,https://github.com/cindustries/unreal-directory,143,20,,Directory of useful Unreal Engine 4 resources
+Drakynfly/HeartGraph,https://github.com/Drakynfly/HeartGraph,143,17,,A generic runtime node graph editor and viewer for Unreal Engine
+TensorWorks/UE-Clang-Format,https://github.com/TensorWorks/UE-Clang-Format,142,17,,Unreal Engine Clang-Format configuration and instructions.
+RPG3D/FileDownload-UE4,https://github.com/RPG3D/FileDownload-UE4,141,46,,A http based file download plugin for Unreal Engine 4
+Jay2645/BuoyancySystem,https://github.com/Jay2645/BuoyancySystem,141,25,,A system for buoyancy and boat physics in Unreal Engine 4.
+SocAIty/py_audio2face,https://github.com/SocAIty/py_audio2face,141,25,,"Use the NVIDIA Audio2Face headless server and interact with it through a requests API. Generate animation sequences for Unreal Engine 5, Maya and MetaHumans"
+akintos/UnrealLocres,https://github.com/akintos/UnrealLocres,140,25,,UE4 localization resource file tool
+microsoft/MixedRealityToolkit-Unreal,https://github.com/microsoft/MixedRealityToolkit-Unreal,140,22,,The Mixed Reality Toolkit for Unreal provides a set of components and features to accelerate Mixed Reality app development with Unreal.
+rdeioris/UnrealOnRPI4,https://github.com/rdeioris/UnrealOnRPI4,139,14,,Running Unreal Engine 4 on RaspberryPI 4
+PacktPublishing/Unreal-Engine-4-Scripting-with-CPlusPlus-Cookbook,https://github.com/PacktPublishing/Unreal-Engine-4-Scripting-with-CPlusPlus-Cookbook,139,69,,"Code repository for Unreal Engine 4 Scripting with C++ Cookbook, published by Packt"
+Netflix-Skunkworks/UnrealValidationFramework,https://github.com/Netflix-Skunkworks/UnrealValidationFramework,138,17,,
+orfeasel/DungeonGenerator,https://github.com/orfeasel/DungeonGenerator,138,23,,An Unreal Engine 5 Dungeon Generator
+make-live/multiplayer,https://github.com/make-live/multiplayer,137,61,,"An Unreal Engine 5 template for making your own Pixel Streaming multiplayer games and worlds.  Includes Gameplay Ability System, World Partition, and Online Subsystem."
+EmbarrassingMoment/ProceduralDrawingMaterialSamples,https://github.com/EmbarrassingMoment/ProceduralDrawingMaterialSamples,137,12,,A collection of procedural drawing material samples for Unreal Engine (UE5). Useful for learning technical art and for reference in your projects.
+PlayFab/UnrealMarketplacePlugin,https://github.com/PlayFab/UnrealMarketplacePlugin,136,79,,Source code for the PlayFab Marketplace Plugin for Unreal
+ufna/VaTexAtlas,https://github.com/ufna/VaTexAtlas,136,30,,Simple way to use texture atlases for Unreal Engine 4 UMG
+mushe/NiagaraFluid,https://github.com/mushe/NiagaraFluid,136,20,,Fluid simulation(SPH) and water rendering in Unreal Engine 5 Niagara(GPU simulation stage)
+Geromatic/Midi-Unreal,https://github.com/Geromatic/Midi-Unreal,135,32,,Midi for Unreal Engine
+ncsoft/Unreal.js-demo,https://github.com/ncsoft/Unreal.js-demo,135,36,,Demo project for unreal.js
+Chrizey91/RuntimeMeshLoader,https://github.com/Chrizey91/RuntimeMeshLoader,135,37,,"A pluging for Unreal Engine 4 and Unreal Engine 5, which allows to import meshes during runtime."
+tomlooman/VRTemplates,https://github.com/tomlooman/VRTemplates,135,69,,VR Templates for Unreal Engine 4.11 and above
+dotBunny/CLionSourceCodeAccess,https://github.com/dotBunny/CLionSourceCodeAccess,135,27,,A CLion Plugin for Unreal Engine
+PacktPublishing/Elevating-Game-Experiences-with-Unreal-Engine-5-Second-Edition,https://github.com/PacktPublishing/Elevating-Game-Experiences-with-Unreal-Engine-5-Second-Edition,134,58,,"Elevating Game Experiences with Unreal Engine 5 - Second Edition, published by Packt"
+rive-app/rive-unreal,https://github.com/rive-app/rive-unreal,133,13,,
+AnimaVR/NeuroSync_Player,https://github.com/AnimaVR/NeuroSync_Player,133,47,,The NeuroSync Player allows for real-time streaming of facial blendshapes into Unreal Engine 5 using LiveLink - enabling facial animation from audio input.
+Zebratic/UE4Injector,https://github.com/Zebratic/UE4Injector,132,24,,"Unreal Engine 4 vulnerability, that allows you to run shellcode directly into the target game process, to load any DLL undetected from most game anti cheats, such as Easy Anti Cheat, BattleEye, Ricoch..."
+nils-soderman/vscode-unreal-python,https://github.com/nils-soderman/vscode-unreal-python,131,18,,Visual Studio Code extension with features to assist when writing python code for Unreal Engine
+RaiaN/RuntimeImageLoader,https://github.com/RaiaN/RuntimeImageLoader,131,23,,Load images and GIFs into Unreal at runtime without hitches 
+EverNewJoy/UE4GamepadUMG,https://github.com/EverNewJoy/UE4GamepadUMG,131,47,,Unreal Engine 4 gamepad plugin so you can use a gamepad like a mouse in UMG
+Ghost2020/XiaoBuild,https://github.com/Ghost2020/XiaoBuild,131,10,,Free and open source distributed compilation system for Unreal Engine
+DoubleDeez/MDFastBinding,https://github.com/DoubleDeez/MDFastBinding,131,14,,A versatile and performant alternative to property bindings for designer-friendly workflows in Unreal Engine 5.1+
+bneukom/UnrealLandscape,https://github.com/bneukom/UnrealLandscape,130,41,,Landscape synthesis for UE4 using landcover maps and digital elevation models.
+Azure/Unreal-Pixel-Streaming,https://github.com/Azure/Unreal-Pixel-Streaming,130,80,,
+PacktPublishing/Unreal-Engine-5-Game-Development-with-C-Scripting,https://github.com/PacktPublishing/Unreal-Engine-5-Game-Development-with-C-Scripting,130,37,,"Unreal Engine 5 Game Development with C++ Scripting, published by Packt"
+strangergwenn/UnrealUpdater,https://github.com/strangergwenn/UnrealUpdater,129,38,,"GAMEDEV / Game launcher, updater for Unreal Engine 4 games"
+devinacker/UnrealKey,https://github.com/devinacker/UnrealKey,129,19,,AES decryption key finder for Unreal Engine 4
+AyoubKhammassi/UnrealMobileNeRF,https://github.com/AyoubKhammassi/UnrealMobileNeRF,129,10,,A plugin for importing and visualizing pre-trained MobileNeRF scenes in Unreal Engine.
+ash3D/UEVideoRecorder,https://github.com/ash3D/UEVideoRecorder,129,35,,Video record and screenshot taking plugin for Unreal Engine 4.
+aws-samples/deploying-unreal-engine-pixel-streaming-server-on-ec2,https://github.com/aws-samples/deploying-unreal-engine-pixel-streaming-server-on-ec2,128,38,,Repo contains code and documentation that allows you to deploy Windows-based Unreal Engine 4 Pixel Streaming builds to EC2.
+zompi2/UE4EnhancedCodeFlow,https://github.com/zompi2/UE4EnhancedCodeFlow,128,18,,This code plugin for Unreal Engine provides functions that drastically improve the quality of life during the implementation of game flow in C++.
+skarndev/umodel_tools,https://github.com/skarndev/umodel_tools,128,20,,"A Blender add-on featuring import of Unreal Engine games static meshes and maps. It provides basic support for many UE games, while some have dedicated improved support."
+thejinchao/libprotobuf,https://github.com/thejinchao/libprotobuf,127,48,,libprotobuf for Unreal Engine 4
+getnamo/Llama-Unreal,https://github.com/getnamo/Llama-Unreal,127,23,,Llama.cpp plugin for Unreal Engine 5
+RedpointGames/uet,https://github.com/RedpointGames/uet,127,17,,"UET (Unreal Engine Tool) makes building and testing Unreal Engine projects and plugins easy. It can distribute builds with BuildGraph, remotely execute automation tests on device and across multiple m..."
+p-ranav/box,https://github.com/p-ranav/box,127,5,,box is a text-based visual programming language inspired by Unreal Engine Blueprint function graphs.
+shalzuth/UnrealSharp,https://github.com/shalzuth/UnrealSharp,126,41,,"esp, radar, and other tools for unreal engine UE games"
+sammyfreg/UnrealNetImgui,https://github.com/sammyfreg/UnrealNetImgui,126,30,,netImgui plugin for Unreal 4
+RedPandaProjects/STALKERonUE,https://github.com/RedPandaProjects/STALKERonUE,126,11,,Port the original STALKER game series to Unreal Engine 5
+1694439208/Avalonia_BluePrint,https://github.com/1694439208/Avalonia_BluePrint,126,16,,"avalonia, avalonia node editor, imitate unreal engine blueprint. 使用avalonia开发的节点编辑器，模仿虚幻引擎蓝图"
+freetimecoder/unreal-pcg-examples,https://github.com/freetimecoder/unreal-pcg-examples,125,33,,Accompanying project to the Unreal PCG Tutorial series: https://www.youtube.com/watch?v=BqPhdQOweqU&list=PLA03OHAaHgYpo0enf8p-2oEpja3grLOKZ
+StudioSyndiCatCaius/OmegaGameFramework,https://github.com/StudioSyndiCatCaius/OmegaGameFramework,125,26,,"Easy expansive gameplay framework plugin for Unreal Engine. (Abilities, Attributes, Modular Systems, Async Events, and more)"
+irajsb/UE_CaptureSubsystem,https://github.com/irajsb/UE_CaptureSubsystem,124,26,,Runtime video and screenshot capture system for Unreal Engine 
+Roemer/ut99-server,https://github.com/Roemer/ut99-server,124,33,,A dockerfile for a fully functional and easy configurable Unreal Tournament 99 server.
+GDi4K/unreal-fetch,https://github.com/GDi4K/unreal-fetch,123,28,,The Fetch API inspired HTTP client for Unreal Engine. Supports both Blueprints & C++.
+microsoft/MixedReality-GraphicsTools-Unreal,https://github.com/microsoft/MixedReality-GraphicsTools-Unreal,122,25,,Graphics tools and components for developing Mixed Reality applications in Unreal Engine.
+ufna/VaQuoleUI,https://github.com/ufna/VaQuoleUI,122,58,,[DEPRECATED] Web UI framework plugin for Unreal Engine 4 - feel the power of HTML5!
+modio/modio-ue,https://github.com/modio/modio-ue,122,22,,Unreal Engine Plugin for easily integrating mod.io into your game - the UGC management service for game developers 
+gufranthakur/FlowForge,https://github.com/gufranthakur/FlowForge,122,17,,"FlowForge is a simple visual programming tool built in Java, inspired from Unreal Engine 5 blueprints system"
+nutti/UEPlugin-Kdtree,https://github.com/nutti/UEPlugin-Kdtree,121,30,,Unreal Engine Plugin: k-d tree
+tuatec/TTToolbox,https://github.com/tuatec/TTToolbox,121,30,,TTToolbox provides useful helper scripts to automate your character integration workflows in Unreal Engine
+DarknessFX/DFoundryFX,https://github.com/DarknessFX/DFoundryFX,121,17,,"Unreal Engine 5.6 Plugin with Dear ImGUI, customizable performance metric charts (including Shipping builds), Shader compiler monitoring and STAT commands control panel for Unreal Engine GameViewports..."
+hugoattal/ElectronicNodes,https://github.com/hugoattal/ElectronicNodes,121,10,,Wiring style for blueprint and material editors in the Unreal Engine
+markolofsen/metaeditor,https://github.com/markolofsen/metaeditor,121,27,,The Pixel Streaming library for ReactJS facilitates the integration of Unreal Engine v.5 into a web browser. It enables the transmission of commands and receipt of callbacks from the stream server onc...
+lucoiso/UEModularFeatures_ExtraActions,https://github.com/lucoiso/UEModularFeatures_ExtraActions,121,22,,This plugin integrates GAS and Enhanced Input to the existing Game Features and Modular plugins from Unreal Engine.
+PacktPublishing/Unreal-Engine-4.x-Scripting-with-C-Cookbook---Second-edition,https://github.com/PacktPublishing/Unreal-Engine-4.x-Scripting-with-C-Cookbook---Second-edition,120,49,,by Packt publishing
+GHFear/AESKeyFinder-By-GHFear,https://github.com/GHFear/AESKeyFinder-By-GHFear,120,12,,Tool for finding 256-bit AES keys in Unreal Engine 4 and 5 executables.
+cjmlima/UE5-Blender-Rig,https://github.com/cjmlima/UE5-Blender-Rig,119,12,,A simple Blender 4 rig for Unreal Engine 5 Manny/Quinn skeleton
+rfsheffer/RyHelpfulHelpers,https://github.com/rfsheffer/RyHelpfulHelpers,118,14,,Extremely helpful helper functions for developing Blueprint and C++ projects in Unreal Engine.
+DarknessFX/UEPlugins_DisableDefault,https://github.com/DarknessFX/UEPlugins_DisableDefault,118,8,,Tool for manage Unreal Engine Plugins (.uplugins) set to Enabled By Default .
+percpopper/UE-Silent-Aim,https://github.com/percpopper/UE-Silent-Aim,118,21,,"An Unreal Engine silent aim method, not usable on all games. Tested on Fortnite, Rogue Company, Bloodhunt, and Splitgate."
+shun126/DungeonGenerator,https://github.com/shun126/DungeonGenerator,118,22,,"Procedural 3D dungeon generator plugin for Unreal Engine 5. Generate procedural levels, mini-maps, and missions for your next roguelike game."
+spudgy/UnrealEngine4-SwissKnife,https://github.com/spudgy/UnrealEngine4-SwissKnife,117,47,,Reversing Tool designed for Unreal Engine4 to debugg objects JIT
+getnamo/TCP-Unreal,https://github.com/getnamo/TCP-Unreal,117,39,,Convenience TCP wrapper for Unreal Engine
+ufna/VaOceanMobile,https://github.com/ufna/VaOceanMobile,117,35,,Ocean shader created for mobile games on Unreal Engine 4
+AscarreX/UE4-Dumper,https://github.com/AscarreX/UE4-Dumper,117,28,,Dump offsets and functions for games made using Unreal Engine 
+lucoiso/UEElementusInventory,https://github.com/lucoiso/UEElementusInventory,117,26,,Unreal Engine plugin that provides a Data-Driven Inventory & Items system.
+gerlogu/WeaponFOVAndClippingFix,https://github.com/gerlogu/WeaponFOVAndClippingFix,117,19,,An Unreal Engine asset to fix the most common FPS problems in an easy way 🔫
+gtreshchev/AudioAnalysisTools,https://github.com/gtreshchev/AudioAnalysisTools,117,21,,Audio Analysis Tools plugin for Unreal Engine. Provides a variety of functions for analyzing audio data. Works in conjunction with the Runtime Audio Importer plugin.
+ayeletstudioindia/unreal-analyzer-mcp,https://github.com/ayeletstudioindia/unreal-analyzer-mcp,116,26,,MCP server for Unreal Engine 5
+rdeioris/glTFRuntime-docs,https://github.com/rdeioris/glTFRuntime-docs,116,17,,Official Documentation for the glTFRuntime Unreal Engine Plugin
+rnixik/spider-navigation-plugin,https://github.com/rnixik/spider-navigation-plugin,116,38,,A plugin for Unreal Engine 4 with a custom navigation system suitable for spiders
+imclab/Apple-Vision-PRO-AR-VR-XR-AI,https://github.com/imclab/Apple-Vision-PRO-AR-VR-XR-AI,116,15,,"Apple Vision Pro - AR VR XR AI code & research - VisionOS, Unity, Unreal, SwiftUI, Reality Composer, iOS, ARkit, ChatGPT, OpenCV, ML"
+DavidColson/UnrealInk,https://github.com/DavidColson/UnrealInk,115,25,,Integration of the Ink language into Unreal 4 (https://github.com/inkle/ink)
+sgeraldes/LightmassConfiguration,https://github.com/sgeraldes/LightmassConfiguration,115,32,,LightmassConfiguration is a script made for Unreal Engina 4 to allow to change from Unreal's CPU Lightmass to GPU Lightmass (made by Luoshuang for the Unreal Forums) and back. Since there are no optio...
+GiM-GamesInMotion/gFurPro,https://github.com/GiM-GamesInMotion/gFurPro,114,42,,Shell based fur plugin for Unreal Engine 5
+eanticev/ue-gameplay-work-balancer,https://github.com/eanticev/ue-gameplay-work-balancer,114,10,,Unreal Engine Plugin that helps you spread work (time slice it) across multiple frames so your game maintains a stable frame rate (FPS).
+aaronbcarlisle/unreal-python-dev,https://github.com/aaronbcarlisle/unreal-python-dev,113,29,,"This repository contains some simple Python utility scripts for UE5, and the unreal stub file with directions on how to set it up for auto-completion. I'm hoping it'll grow over time and be a useful r..."
+zompi2/UE4EasyLocalizationTool,https://github.com/zompi2/UE4EasyLocalizationTool,113,15,,This plugin introduces a way simpler method of localizing game made in Unreal Engine by simply importing CSV file into engine's localization files.
+zadirion/Unreal.nvim,https://github.com/zadirion/Unreal.nvim,112,25,,Unreal Engine support for Neovim
+freezy/pinball-construction-kit,https://github.com/freezy/pinball-construction-kit,112,47,,A pinball simulator based on Unreal Engine 4
+joeriedel/RadiantUI,https://github.com/joeriedel/RadiantUI,112,53,,CEF Based Web Browser Integration into Unreal Engine 4
+JetBrains/RiderSourceCodeAccess,https://github.com/JetBrains/RiderSourceCodeAccess,112,20,,Plugin for UE4 to user Rider for Unreal Engine as code editor
+rfsheffer/QuestHands,https://github.com/rfsheffer/QuestHands,112,22,,An Unreal Engine 4 plugin for the new Oculus Quest hands tracking. To tie us over till Oculus's official release.
+xiongfang/UnrealCS,https://github.com/xiongfang/UnrealCS,111,29,,
+brumenn/flat-nodes,https://github.com/brumenn/flat-nodes,111,22,,A minimalist style for Unreal Engine graph nodes.
+Eragon-Brisingr/ImGui_WS,https://github.com/Eragon-Brisingr/ImGui_WS,111,19,,Support Unreal Engine use ImGui and Draw on web page.
+AdrianPanGithub/HoudiniEngineForUnreal,https://github.com/AdrianPanGithub/HoudiniEngineForUnreal,110,20,,"Completely Rebuild of official Houdini Engine from Zero, 2x - 15x Faster I/O, and More functionalities optimized for making procedural landscape and city toolset"
+Andicraft/UE4-AuroraEffect,https://github.com/Andicraft/UE4-AuroraEffect,110,10,,A raymarched aurora borealis effect for Unreal 4
+jorgenpt/uasset-rs,https://github.com/jorgenpt/uasset-rs,110,12,,Parsing of Unreal Engine asset files (uassets) in Rust
+HeyZoos/OpenRTSCamera,https://github.com/HeyZoos/OpenRTSCamera,110,18,,"An Unreal Engine 5 open-source RTS/MOBA camera implementation that aims to be fully featured, customizable and dependable"
+AkiKurisu/Ceres,https://github.com/AkiKurisu/Ceres,110,3,,Powerful visual scripting toolkit for Unity inspired from Unreal Blueprint.
+Azure-Samples/azure-digital-twins-unreal-integration,https://github.com/Azure-Samples/azure-digital-twins-unreal-integration,109,49,,Sample project demonstrating the Unreal Engine plug-in for Azure Digital Twins
+getsetgames/Swipe,https://github.com/getsetgames/Swipe,109,48,,A plugin for Unreal Engine 4 that exposes swipes on mobile devices as events in blueprint.
+caseymcc/UE4CMake,https://github.com/caseymcc/UE4CMake,109,19,,Provides a simple way to add a cmake lib to any Unreal Engine 4 (UE4) or 5 (UE5) project.
+strelok2012/BluePrintRenderer,https://github.com/strelok2012/BluePrintRenderer,108,34,,Javascript Unreal Engine 4 Blueprints Renderer
+motionforge/Unreal_Engine_Essential_Materials_UE5,https://github.com/motionforge/Unreal_Engine_Essential_Materials_UE5,108,18,,
+rionix/LocalizationUE4,https://github.com/rionix/LocalizationUE4,108,11,,Translation Editor for Unreal Engine 4
+EZFNDEV/UEDumper,https://github.com/EZFNDEV/UEDumper,108,20,,This can probably automatically dump the SDK for any Unreal Engine Game (Educational Purpose Only)
+ZhuRong-HomoStation/UEImgui,https://github.com/ZhuRong-HomoStation/UEImgui,107,25,,Use imgui in unreal for customize editor 
+Flassari/PSOCacheBuster,https://github.com/Flassari/PSOCacheBuster,107,6,,Clears the PSO driver cache for non-shipping and non-editor builds for easier testing and profiling of first-run-like experience on Unreal Engine games.
+ue4plugins/MayaLiveLink,https://github.com/ue4plugins/MayaLiveLink,106,53,,Plugin for Maya that send data to Unreal Engine
+RoelBartstra/Designer,https://github.com/RoelBartstra/Designer,106,14,,An editor mode for Unreal Engine 4 which simplifies placing and transforming actors.
+gtreshchev/RuntimeArchiver,https://github.com/gtreshchev/RuntimeArchiver,106,25,,"Runtime Archiver plugin for Unreal Engine. Cross-platform archiving and unarchiving directories and files. Supports Zip, Oodle, Tar, LZ4 and GZip formats."
+BlzFans/FlutterUnreal,https://github.com/BlzFans/FlutterUnreal,105,17,,Flutter + Unreal
+Flone-dnb/FWorldGenerator,https://github.com/Flone-dnb/FWorldGenerator,105,22,,Procedural world generator (plugin) for Unreal Engine 4
+trumank/retoc,https://github.com/trumank/retoc,105,15,,Unreal Engine IoStore CLI packing/unpacking tool
+pgii/GyroMocapUE4,https://github.com/pgii/GyroMocapUE4,105,29,,Simple Motion Capture based on gyro MPU-9250 and ESP32 in Unreal Engine
+aa1000/ServerAndLobbySystem,https://github.com/aa1000/ServerAndLobbySystem,105,23,,Server and Lobby System WIP test in Unreal Engine 4 C++ and UMG using the OnlineSubsystem
+UnrealDirective/UDCore,https://github.com/UnrealDirective/UDCore,105,8,,An open-source Unreal Engine plugin that provides quality-of-life functionality to developers.
+shiningdesign/universal_tool_template.py,https://github.com/shiningdesign/universal_tool_template.py,105,27,,"a quick Qt GUI tool development template for Maya, Houdini, Nuke, Fusion, Blender, Unreal, Unity, Krita, Notepad++ and Desktop application, supports automatically for PySide, PyQt4, PySide2, PyQt5 wit..."
+ValentinKraft/Boost_PCL_UnrealThirdPartyPlugin,https://github.com/ValentinKraft/Boost_PCL_UnrealThirdPartyPlugin,104,24,,A template for a Unreal Engine plugin including a C++ Third Party library (the Point Cloud Library)
+ryanjon2040/UnrealNetworkProfiler,https://github.com/ryanjon2040/UnrealNetworkProfiler,104,18,,A modern WPF based Network Profiler for Unreal Engine.
+hxhb/UE4Launcher,https://github.com/hxhb/UE4Launcher,104,39,,A simply & quickly Unreal Engine Project and Engine Tools Launcher(Support Launch Params).
+amuTBKT/UE4GraphicsSample,https://github.com/amuTBKT/UE4GraphicsSample,104,11,,Code samples to show how to use Rendering features in Unreal :)
+no5ix/flock-ai-ue4-plugin,https://github.com/no5ix/flock-ai-ue4-plugin,104,45,,A fish flock AI plugin for Unreal Engine 4. 一个基于虚幻4的鱼群 AI 插件.
+StevensND/ue4-emuswitch-60fps,https://github.com/StevensND/ue4-emuswitch-60fps,104,8,,"60FPS mods for Unreal Engine games that are lock to 30FPS even if you Disable Vsync (Control U on Yuzu, F1 on Ryujinx)"
+natimerry/repak-rivals,https://github.com/natimerry/repak-rivals,103,4,,Unreal Engine .pak file library and CLI in rust
+VerseMetaVerse/UnrealVerse,https://github.com/VerseMetaVerse/UnrealVerse,102,8,,"Information and links about Epic's Unreal Engine including Verse programming language for UEFN, Unreal, Fortnite and the Metaverse along with UE5 and the UE6 convergence "
+blueprintue/blueprintue-cpp-plugin,https://github.com/blueprintue/blueprintue-cpp-plugin,102,27,,C++ Plugin for Unreal Engine
+Shiyatzu/OculusLipsyncPlugin-UE5,https://github.com/Shiyatzu/OculusLipsyncPlugin-UE5,102,12,,"Oculus LipSync Plugin compiled for Unreal Engine 5. This plugin allows you to synchronize the lips of 3D characters in your game with audio in, using the Oculus LipSync technology."
+islamhaqq/UnrealEngineDeepDive,https://github.com/islamhaqq/UnrealEngineDeepDive,101,10,,A deep dive into Unreal Engine's architecture
+mitchemmc/UE4VRCookbook,https://github.com/mitchemmc/UE4VRCookbook,101,44,,Source files for the Unreal Engine VR Cookbook: Developing Virtual Reality with UE4
+lluisgarcia/UE4-Tools,https://github.com/lluisgarcia/UE4-Tools,101,27,,Blender addon for improve the workflow between blender and Unreal engine 4
+trumank/kismet-analyzer,https://github.com/trumank/kismet-analyzer,101,14,,Unreal Engine blueprint/kismet script reverse engineering and modding utilities
+daftsoftware/DaftMover,https://github.com/daftsoftware/DaftMover,101,6,,Custom Movement using Mover on Unreal Engine 5.

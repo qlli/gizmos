@@ -1,0 +1,19 @@
+# 编译输出目录
+bin/
+obj/
+
+# 用户特定文件
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs
+
+# 编译结果
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.ncb
+*.log
