@@ -197,12 +197,70 @@ pip install -r requirements.txt
 # 运行主程序
 python main.py
 
+# 使用采集运行配置（按关键词抓取）
+python main.py --config tech
+
+# 使用指定路径的采集运行配置
+python main.py --config config/collections/tech.json
+
+# 只采集配置里的关键词，不做分析和归档
+python main.py --collect --config tech
+
+# 命令行 --keywords 优先级高于配置里的 keywords
+python main.py --keywords Unity Unreal
+
+# 命令行 --hot 优先级高于配置里的 keywords
+python main.py --hot --config tech
+
 # 仅抓取存量内容
 ./scripts/run_stock.sh
 
 # 仅抓取增量内容
 ./scripts/run_incremental.sh
 ```
+
+### 采集运行配置
+
+采集运行配置是独立 JSON 文件，用于描述一次爬虫任务。当前仅使用 `keywords` 字段，后续可以继续扩展其他字段。
+
+默认配置目录：
+
+```text
+config/collections/
+```
+
+示例：`config/collections/tech.json`
+
+```json
+{
+  "name": "tech",
+  "description": "技术方向内容采集配置示例。当前仅使用 keywords 字段，后续可扩展更多字段。",
+  "keywords": [
+    "游戏开发",
+    "Unity",
+    "Unreal",
+    "游戏引擎",
+    "计算机图形学",
+    "AI人工智能"
+  ]
+}
+```
+
+启动时可以传配置名或路径：
+
+```bash
+python main.py --config tech
+python main.py --config config/collections/tech.json
+python main.py --run-config tech
+python main.py --collection-config tech
+```
+
+配置解析规则：
+
+1. 如果传入绝对/相对路径且文件存在，直接使用该文件。
+2. 如果传入名称，例如 `tech`，会尝试查找 `config/collections/tech.json`。
+3. 配置中的 `keywords` 会在未指定 `--hot` 和未指定 `--keywords` 时自动作为关键词采集条件。
+4. 命令行 `--keywords` 和 `--hot` 优先级高于配置文件。
 
 ## 配置说明
 

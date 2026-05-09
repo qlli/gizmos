@@ -22,6 +22,7 @@ sys.path.insert(0, str(project_root))
 
 from src.utils.logger import setup_logger, get_logger
 from src.utils.config import get_config
+from src.utils.run_config import load_run_config
 from src.pipeline.collector import CollectorStage
 from src.pipeline.analyzer import AnalyzerStage
 from src.pipeline.expander import ExpanderStage
@@ -48,7 +49,12 @@ def parse_args():
     parser.add_argument('--budget', action='store_true', help='显示预算状态')
     parser.add_argument('--report', action='store_true', help='生成报告')
     
-    parser.add_argument('--config', type=str, help='配置文件路径')
+    parser.add_argument(
+        '--config', '--run-config', '--collection-config',
+        dest='config',
+        type=str,
+        help='采集运行配置 JSON 名称或路径；名称会从 config/collections/<name>.json 查找'
+    )
     parser.add_argument('--log-level', type=str, default='INFO', 
                        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                        help='日志级别')
@@ -97,7 +103,10 @@ def run_pipeline(mode: str = 'full', headless: bool = True, **kwargs):
                 logger.info(f"[PIPELINE] 搜集模式: hot, limit={kwargs.get('limit', 100)}")
                 articles = collector.run(mode='hot', limit=kwargs.get('limit', 100))
             elif kwargs.get('keywords'):
-                logger.info(f"[PIPELINE] 搜集模式: keywords, keywords={kwargs.get('keywords')}")
+                logger.info(
+                    f"[PIPELINE] 搜集模式: keywords, keywords={kwargs.get('keywords')}, "
+                    f"run_config={kwargs.get('run_config', {}).get('name')}"
+                )
                 articles = collector.run(mode='keywords', keywords=kwargs.get('keywords'))
             else:
                 logger.info(f"[PIPELINE] 搜集模式: default hot, limit={kwargs.get('limit', 100)}")
@@ -244,6 +253,18 @@ def main():
         'limit': args.limit,
         'enable_expand': args.expand
     }
+    
+    run_config = load_run_config(args.config)
+    if run_config:
+        kwargs['run_config'] = run_config
+        configured_keywords = run_config.get('keywords', [])
+        if configured_keywords and not args.keywords and not args.hot:
+            kwargs['keywords'] = configured_keywords
+            logger.info(f"使用运行配置中的关键词: {configured_keywords}")
+        elif configured_keywords and args.keywords:
+            logger.info("命令行 --keywords 已指定，优先使用命令行关键词，运行配置关键词仅记录不覆盖")
+        elif configured_keywords and args.hot:
+            logger.info("命令行 --hot 已指定，优先使用热门模式，运行配置关键词仅记录不覆盖")
     
     try:
         result = run_pipeline(mode=mode, **kwargs)
