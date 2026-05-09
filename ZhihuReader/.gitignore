@@ -1,0 +1,56 @@
+# 敏感信息 / 本地配置
+config/setting.json
+.env
+.env.*
+*.key
+*.pem
+*.p12
+
+# 浏览器数据（包含 Cookie / 登录态 / 缓存）
+data/browser_data/
+
+# 爬虫运行产物
+data/raw/
+data/processed/
+data/archive/
+data/**/*.log
+*.xlsx
+~$*.xlsx
+
+# 日志文件
+logs/
+*.log
+
+# Python 缓存与虚拟环境
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+env/
+venv/
+ENV/
+.venv/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.old
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
