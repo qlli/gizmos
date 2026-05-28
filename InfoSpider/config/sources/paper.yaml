@@ -1,0 +1,38 @@
+# 论文爬虫配置（Semantic Scholar）
+
+source_name: paper
+source_type: academic
+enabled: true
+
+# Semantic Scholar Graph API；可选 API Key 也可通过环境变量 SEMANTIC_SCHOLAR_API_KEY 提供
+auth:
+  api_key: ""
+
+rate_limit:
+  requests_per_minute: 20
+  retry_on_failure: true
+  max_retries: 2
+
+search:
+  default_keywords:
+    - artificial intelligence
+    - computer graphics
+    - game engine
+    - recommender system
+  per_page: 20
+  min_citations: 5
+  year: ""                 # 示例: "2020-2026"
+  fields_of_study: []       # 示例: ["Computer Science"]
+
+trending:
+  default_query: artificial intelligence
+  recent_years: 3
+  min_citations: 20
+
+filters:
+  min_citations: 5
+  blacklist_authors: []
+  blacklist_keywords:
+    - survey only
+  spam_keywords:
+    - predatory

@@ -70,7 +70,9 @@ InfoSpider/
 │   ├── default.yaml        # 全局配置
 │   └── sources/            # 各信息源配置
 │       ├── zhihu.yaml
-│       └── bilibili.yaml
+│       ├── bilibili.yaml
+│       ├── github.yaml
+│       └── paper.yaml
 ├── src/
 │   ├── core/
 │   │   ├── crawler/        # 爬虫引擎

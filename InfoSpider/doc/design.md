@@ -598,7 +598,7 @@ MVP阶段优先实现 **Web App**（开发成本最低，覆盖全功能）：
 
 - [x] 实现 GitHub 爬虫（GitHubCrawler）
 - [ ] 实现 YouTube 爬虫（YouTubeCrawler）
-- [ ] 实现论文爬虫（PaperCrawler - DBLP/SemanticScholar）
+- [x] 实现论文爬虫（PaperCrawler - DBLP/SemanticScholar）
 - [ ] 引入 ChromaDB 向量数据库
 - [ ] 实现 `SemanticMatcher`（语义匹配）
 - [ ] 用户画像向量化和相似度计算

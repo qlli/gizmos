@@ -173,6 +173,8 @@ def _register_crawlers():
     import src.core.crawler.zhihu  # noqa: F401
     import src.core.crawler.bilibili  # noqa: F401
     import src.core.crawler.github  # noqa: F401
+    import src.core.crawler.paper  # noqa: F401
+
 
 
 

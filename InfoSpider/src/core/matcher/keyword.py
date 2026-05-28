@@ -30,7 +30,7 @@ class KeywordMatcher(BaseMatcher):
         self.blacklist_authors: List[str] = []
         
         # 从各源配置中合并黑名单
-        for source in ["zhihu", "bilibili", "github"]:
+        for source in ["zhihu", "bilibili", "github", "paper"]:
             source_cfg = config.get_source_config(source)
             filters = source_cfg.get("filters", {})
             self.blacklist_keywords.extend(filters.get("blacklist_keywords", []))
