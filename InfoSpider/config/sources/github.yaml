@@ -1,0 +1,46 @@
+# GitHub 仓库爬虫配置
+
+source_name: github
+source_type: code
+enabled: true
+
+# 可选：也可通过环境变量 GITHUB_TOKEN 提供，提升 API 限流额度
+auth:
+  token: ""
+
+# 速率限制；未认证 GitHub API 限制较低，默认保守一些
+rate_limit:
+  requests_per_minute: 20
+  retry_on_failure: true
+  max_retries: 2
+
+# 搜索配置
+search:
+  default_keywords:
+    - AI
+    - game engine
+    - unreal
+    - computer graphics
+  sort: stars       # stars / forks / updated
+  order: desc
+  min_stars: 100
+  language: ""      # 可选：Python / C++ / TypeScript 等
+  per_page: 30
+
+# 趋势配置：GitHub 无官方 trending API，这里用近期创建且 stars 较高的仓库近似
+trending:
+  days: 30
+  min_stars: 100
+  sort: stars
+  order: desc
+
+# 过滤配置
+filters:
+  min_stars: 100
+  blacklist_authors: []
+  blacklist_keywords:
+    - demo-only
+    - tutorial-only
+  spam_keywords:
+    - casino
+    - gambling

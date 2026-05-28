@@ -1,0 +1,32 @@
+# InfoSpider 全局默认配置
+
+# 日志配置
+logging:
+  level: INFO
+  file: logs/infospider.log
+  max_size_mb: 10
+  backup_count: 5
+
+# 存储路径
+storage:
+  raw_path: data/raw
+  reports_path: data/reports
+  profiles_path: data/profiles
+  browser_path: data/browser
+
+# AI 分析（Phase 1 暂不启用）
+ai:
+  provider: none  # none / openai / local_llm
+  openai:
+    api_key: ""
+    model: gpt-4o-mini
+    max_tokens: 2000
+    temperature: 0.3
+  local_llm:
+    enabled: false
+    endpoint: http://localhost:11434/api/generate
+    model: llama3
+
+# 默认用户画像
+user_profile:
+  default_user_id: default
