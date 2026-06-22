@@ -48,6 +48,52 @@ python cli.py collect -s bilibili -s zhihu -s github -k "AI" --limit 30
 python cli.py sources
 ```
 
+### 4.1 使用采集配置(JSON)
+
+采集配置文件放在 `config/collections/*.json`，用于复用“关键词 + 抓取参数”组合，适配不同人/不同主题的个性化需求。
+
+```bash
+# 列出可用采集配置
+python cli.py collections
+
+# 按配置名采集（覆盖 -s/-k/-l）
+python cli.py collect -c gamedev
+
+# 也可直接指定 JSON 路径
+python cli.py collect -c ./config/collections/default.json
+```
+
+采集配置字段：
+
+```json
+{
+  "name": "gamedev",
+  "description": "游戏开发与UE技术多源采集",
+  "keywords": ["Unreal Engine", "UE5", "game engine"],
+  "sources": ["bilibili", "github", "paper"],
+  "task_type": "search",
+  "limit": 30,
+  "per_keyword_limit": 10,
+  "match": {
+    "min_score": 0.35,
+    "require_keyword_match": true,
+    "blacklist_keywords": ["广告", "推广"],
+    "spam_keywords": []
+  }
+}
+```
+
+字段说明：
+
+- `keywords`: 关键词列表，既作为搜索词，也用于关键词过滤
+- `sources`: 目标信息源
+- `task_type`: `search` / `trending`
+- `limit`: 每个源抓取数量上限
+- `per_keyword_limit`: 每个关键词抓取上限（0 表示自动均分）
+- `match.min_score`: 综合评分通过阈值
+- `match.require_keyword_match`: 为 `true` 时，未命中关键词的内容会被过滤
+- `match.blacklist_keywords` / `match.spam_keywords`: 额外的黑名单/垃圾词
+
 ### 5. 管理兴趣标签
 
 ```bash
@@ -68,6 +114,9 @@ InfoSpider/
 ├── cli.py                  # CLI 入口
 ├── config/
 │   ├── default.yaml        # 全局配置
+│   ├── collections/        # 采集配置(JSON, 关键词+抓取参数)
+│   │   ├── default.json
+│   │   └── gamedev.json
 │   └── sources/            # 各信息源配置
 │       ├── zhihu.yaml
 │       ├── bilibili.yaml

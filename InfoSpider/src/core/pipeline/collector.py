@@ -11,6 +11,7 @@ from ..matcher.keyword import KeywordMatcher
 from ..matcher.base import MatchResult
 from ...models.user import UserProfile
 from ...models.task import CrawlTask, TaskStatus, TaskType
+from ...models.collection import CollectionConfig
 from ...storage.json_storage import JSONStorage
 from ...storage.html_report import HTMLReportGenerator
 from ...utils.config import get_config
@@ -59,6 +60,7 @@ class CollectorStage(BasePipelineStage):
         return self._crawlers[source]
     
     async def run(self, task: Optional[CrawlTask] = None,
+                  collection: Optional[CollectionConfig] = None,
                   sources: Optional[List[str]] = None,
                   keywords: Optional[List[str]] = None,
                   limit: int = 20,
@@ -70,6 +72,7 @@ class CollectorStage(BasePipelineStage):
         
         Args:
             task: 采集任务（如提供则覆盖其他参数）
+            collection: 采集配置(JSON驱动，提供则覆盖 sources/keywords/limit/task_type)
             sources: 目标平台列表
             keywords: 搜索关键词
             limit: 每个源的最大采集量
@@ -80,8 +83,28 @@ class CollectorStage(BasePipelineStage):
         Returns:
             匹配通过的 CrawlItem 列表
         """
+        per_keyword_limit = 0
+        
+        # 采集配置优先级最高（位于 task 之上，便于复用 JSON 配置）
+        if collection:
+            sources = collection.sources
+            keywords = collection.keywords
+            limit = collection.limit
+            task_type = collection.task_type
+            per_keyword_limit = collection.per_keyword_limit
+            # 按采集配置重建匹配器（关键词过滤 + 阈值 + 额外黑名单）
+            self.matcher = KeywordMatcher(
+                keywords=collection.keywords,
+                min_score=collection.match.min_score,
+                require_keyword_match=collection.match.require_keyword_match,
+                extra_blacklist=collection.match.blacklist_keywords,
+                extra_spam=collection.match.spam_keywords,
+            )
+            logger.info(f"[Pipeline] 使用采集配置: {collection.name} "
+                        f"(关键词={len(keywords)}, 源={sources}, 上限={limit})")
+        
         # 解析参数
-        if task:
+        if task and not collection:
             sources = task.sources
             keywords = task.keywords
             limit = task.limit
@@ -106,7 +129,7 @@ class CollectorStage(BasePipelineStage):
             try:
                 crawler = await self._get_crawler(source)
                 source_items = await self._collect_from_source(
-                    crawler, task_type, keywords, limit
+                    crawler, task_type, keywords, limit, per_keyword_limit
                 )
                 all_items.extend(source_items)
                 logger.info(f"[Pipeline] {source} 采集完成: {len(source_items)} 条")
@@ -169,16 +192,19 @@ class CollectorStage(BasePipelineStage):
         return item.voteup * 3 + item.view_count + item.comment_count * 5
     
     async def _collect_from_source(self, crawler: BaseCrawler, task_type: str,
-                                    keywords: Optional[List[str]], limit: int) -> List[CrawlItem]:
+                                    keywords: Optional[List[str]], limit: int,
+                                    per_keyword_limit: int = 0) -> List[CrawlItem]:
         """从单个源采集"""
         items = []
-
         
         if task_type == "trending":
             async for item in crawler.get_trending(limit=limit):
                 items.append(item)
         elif task_type == "search" and keywords:
-            per_keyword = max(limit // len(keywords), 10)
+            if per_keyword_limit > 0:
+                per_keyword = per_keyword_limit
+            else:
+                per_keyword = max(limit // len(keywords), 10)
             for keyword in keywords:
                 async for item in crawler.search(keyword, limit=per_keyword):
                     items.append(item)

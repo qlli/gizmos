@@ -1,0 +1,30 @@
+{
+  "name": "gamedev",
+  "description": "游戏开发与UE技术：跨B站/GitHub/论文多源采集，强制关键词命中",
+  "keywords": [
+    "Unreal Engine",
+    "UE5",
+    "game engine",
+    "computer graphics",
+    "rendering",
+    "游戏开发"
+  ],
+  "sources": [
+    "bilibili",
+    "github",
+    "paper"
+  ],
+  "task_type": "search",
+  "limit": 30,
+  "per_keyword_limit": 10,
+  "match": {
+    "min_score": 0.35,
+    "require_keyword_match": true,
+    "blacklist_keywords": [
+      "广告",
+      "推广",
+      "课程推销"
+    ],
+    "spam_keywords": []
+  }
+}

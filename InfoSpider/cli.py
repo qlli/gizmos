@@ -24,10 +24,11 @@ def _setup():
 
 @app.command()
 def collect(
-    sources: List[str] = typer.Option(["bilibili"], "--source", "-s", help="信息源(可多次指定): zhihu, bilibili"),
+    sources: List[str] = typer.Option(["bilibili"], "--source", "-s", help="信息源(可多次指定): zhihu, bilibili, github, paper"),
     keywords: List[str] = typer.Option([], "--keyword", "-k", help="搜索关键词(可多次指定)"),
     limit: int = typer.Option(20, "--limit", "-l", help="每个源的最大采集数量"),
     trending: bool = typer.Option(False, "--trending", "-t", help="获取热门内容(不指定关键词时)"),
+    collection: Optional[str] = typer.Option(None, "--collection", "-c", help="采集配置名或JSON路径(提供则覆盖 -s/-k/-l)"),
     user: str = typer.Option("default", "--user", "-u", help="用户ID"),
     no_report: bool = typer.Option(False, "--no-report", help="不自动打开HTML报告"),
     headless: bool = typer.Option(True, "--headless/--no-headless", help="浏览器无头模式"),
@@ -40,6 +41,23 @@ def collect(
     
     from src.core.pipeline.collector import CollectorStage
     from src.core.crawler.registry import CrawlerRegistry
+    from src.models.collection import CollectionConfig
+    
+    # 加载采集配置（如指定）
+    collection_cfg = None
+    if collection:
+        try:
+            collection_cfg = CollectionConfig.load(collection)
+        except FileNotFoundError as e:
+            typer.echo(f"错误: {e}")
+            typer.echo(f"可用采集配置: {CollectionConfig.list_available()}")
+            raise typer.Exit(1)
+        sources = collection_cfg.sources
+        keywords = collection_cfg.keywords
+        limit = collection_cfg.limit
+        task_type = collection_cfg.task_type
+    else:
+        task_type = "trending" if trending else "search"
     
     # 验证源
     available = CrawlerRegistry.list_sources()
@@ -48,17 +66,18 @@ def collect(
             typer.echo(f"错误: 未知的信息源 '{s}'，可用: {available}")
             raise typer.Exit(1)
     
-    task_type = "trending" if trending else "search"
-    
     if task_type == "search" and not keywords:
         typer.echo("提示: 未指定关键词，将使用热门模式")
         task_type = "trending"
     
+    if collection_cfg:
+        typer.echo(f"使用采集配置: {collection_cfg.name} - {collection_cfg.description}")
     typer.echo(f"开始采集: 源={sources}, 关键词={keywords or '热门'}, 数量={limit}")
     
     async def _run():
         async with CollectorStage() as stage:
             results = await stage.run(
+                collection=collection_cfg,
                 sources=sources,
                 keywords=keywords if keywords else None,
                 limit=limit,
@@ -77,6 +96,29 @@ def collect(
             typer.echo(f"  {i}. [{item.source}/{item.item_type}] {item.title}")
             typer.echo(f"     {item.url}")
             typer.echo(f"     👍{item.voteup} 👁{item.view_count} 💬{item.comment_count}")
+
+
+@app.command()
+def collections():
+    """列出所有可用的采集配置(JSON)"""
+    _setup()
+    
+    from src.models.collection import CollectionConfig
+    
+    names = CollectionConfig.list_available()
+    if not names:
+        typer.echo("暂无采集配置，请在 config/collections/ 下创建 JSON 文件")
+        return
+    
+    typer.echo("可用的采集配置:")
+    typer.echo("-" * 40)
+    for name in names:
+        try:
+            cfg = CollectionConfig.load(name)
+            typer.echo(f"  {name:<14} {cfg.description}")
+            typer.echo(f"  {'':<14} 源={cfg.sources}, 关键词数={len(cfg.keywords)}, 上限={cfg.limit}")
+        except Exception as e:
+            typer.echo(f"  {name:<14} (加载失败: {e})")
 
 
 @app.command()

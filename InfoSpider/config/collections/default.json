@@ -1,0 +1,25 @@
+{
+  "name": "default",
+  "description": "默认采集配置示例：B站游戏开发相关内容",
+  "keywords": [
+    "游戏开发",
+    "Unreal",
+    "UE5",
+    "图形学"
+  ],
+  "sources": [
+    "bilibili"
+  ],
+  "task_type": "search",
+  "limit": 20,
+  "per_keyword_limit": 10,
+  "match": {
+    "min_score": 0.3,
+    "require_keyword_match": false,
+    "blacklist_keywords": [
+      "广告",
+      "推广"
+    ],
+    "spam_keywords": []
+  }
+}

@@ -18,6 +18,7 @@ class Config:
     _instance: Optional['Config'] = None
     _data: dict = {}
     _source_configs: dict = {}
+    _config_dir: Optional[str] = None
     
     def __new__(cls):
         if cls._instance is None:
@@ -31,6 +32,7 @@ class Config:
             config_dir = self._find_config_dir()
         
         config_path = Path(config_dir)
+        self._config_dir = str(config_path)
         
         # 加载全局默认配置
         default_file = config_path / "default.yaml"
@@ -108,6 +110,13 @@ class Config:
                 return default
         return value
     
+    @property
+    def config_dir(self) -> str:
+        """已加载的配置目录路径"""
+        if not self._loaded:
+            self.load()
+        return self._config_dir or self._find_config_dir()
+
     @property
     def data(self) -> dict:
         """获取完整配置字典"""
