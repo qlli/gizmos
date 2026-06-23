@@ -206,7 +206,7 @@ class ZhihuCrawler(BaseCrawler):
         
         logger.info(f"[zhihu] 搜索完成: keyword={keyword}, 结果={yielded}")
     
-    async def get_trending(self, category: str = "", limit: int = 20) -> AsyncIterator[CrawlItem]:
+    async def get_trending(self, category: str = "", limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """获取知乎热门内容"""
         logger.info(f"[zhihu] 获取热门: limit={limit}")
         

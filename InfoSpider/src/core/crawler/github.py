@@ -135,8 +135,8 @@ class GitHubCrawler(BaseCrawler):
             query_parts.append(f"language:{language}")
 
         yielded = 0
-        page = 1
         page_size = min(max(self.per_page, 1), 100)
+        page = self._start_page(filters, limit, page_size)
 
         while yielded < limit:
             params = {
@@ -168,7 +168,16 @@ class GitHubCrawler(BaseCrawler):
 
         logger.info(f"[github] 搜索完成: keyword={keyword}, 结果={yielded}")
 
-    async def get_trending(self, category: str = "", limit: int = 20) -> AsyncIterator[CrawlItem]:
+    @staticmethod
+    def _start_page(filters: dict, limit: int, page_size: int) -> int:
+        """根据 page_offset 计算起始页（用于逐轮加深采集）"""
+        page_offset = int(filters.get("page_offset", 0) or 0)
+        if page_offset <= 0:
+            return 1
+        pages_per_window = max((limit + page_size - 1) // page_size, 1)
+        return 1 + page_offset * pages_per_window
+
+    async def get_trending(self, category: str = "", limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """获取近期高星仓库，作为趋势仓库近似实现"""
         trending_cfg = self.source_config.get("trending", {})
         days = int(trending_cfg.get("days", 30) or 30)
@@ -186,8 +195,8 @@ class GitHubCrawler(BaseCrawler):
         logger.info(f"[github] 获取趋势仓库: days={days}, limit={limit}")
 
         yielded = 0
-        page = 1
         page_size = min(max(self.per_page, 1), 100)
+        page = self._start_page(filters, limit, page_size)
 
         while yielded < limit:
             params = {

@@ -172,8 +172,8 @@ class BilibiliCrawler(BaseCrawler):
         logger.info(f"[bilibili] 搜索: keyword={keyword}, limit={limit}")
         
         order = filters.get("order", self.source_config.get("search", {}).get("order", "totalrank"))
-        page = 1
         page_size = 20
+        page = self._start_page(filters, limit, page_size)
         yielded = 0
         
         while yielded < limit:
@@ -212,12 +212,21 @@ class BilibiliCrawler(BaseCrawler):
         
         logger.info(f"[bilibili] 搜索完成: keyword={keyword}, 结果={yielded}")
     
-    async def get_trending(self, category: str = "", limit: int = 20) -> AsyncIterator[CrawlItem]:
+    @staticmethod
+    def _start_page(filters: dict, limit: int, page_size: int) -> int:
+        """根据 page_offset 计算起始页（用于逐轮加深采集）"""
+        page_offset = int(filters.get("page_offset", 0) or 0)
+        if page_offset <= 0:
+            return 1
+        pages_per_window = max((limit + page_size - 1) // page_size, 1)
+        return 1 + page_offset * pages_per_window
+    
+    async def get_trending(self, category: str = "", limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """获取B站热门视频"""
         logger.info(f"[bilibili] 获取热门: limit={limit}")
         
-        page = 1
         page_size = 20
+        page = self._start_page(filters, limit, page_size)
         yielded = 0
         
         while yielded < limit:

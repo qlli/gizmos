@@ -152,7 +152,8 @@ class CollectorStage(BasePipelineStage):
                         f"(剩余 {self._format_remaining(deadline)}) ===")
             
             try:
-                matched = await self._crawl_and_match(plan, user_profile, seen_keys=seen_keys)
+                matched = await self._crawl_and_match(plan, user_profile, seen_keys=seen_keys,
+                                                       page_offset=round_no - 1)
             except Exception as e:
                 logger.error(f"[Pipeline] 第 {round_no} 轮采集异常: {e}")
                 matched = []
@@ -244,13 +245,15 @@ class CollectorStage(BasePipelineStage):
         return UserProfile.load(user_id, profiles_dir)
     
     async def _crawl_and_match(self, plan: dict, user_profile: UserProfile,
-                               seen_keys: Optional[set] = None) -> List[CrawlItem]:
+                               seen_keys: Optional[set] = None,
+                               page_offset: int = 0) -> List[CrawlItem]:
         """单轮采集 + 去重 + 匹配
         
         Args:
             plan: 采集计划（_resolve_plan 结果）
             user_profile: 用户画像
             seen_keys: 跨轮去重集合，提供时会跳过已处理过的条目并就地更新
+            page_offset: 逐轮加深偏移，传给爬虫从更深的页开始
             
         Returns:
             本轮匹配通过的 CrawlItem 列表
@@ -267,7 +270,7 @@ class CollectorStage(BasePipelineStage):
             try:
                 crawler = await self._get_crawler(source)
                 source_items = await self._collect_from_source(
-                    crawler, task_type, keywords, limit, per_keyword_limit
+                    crawler, task_type, keywords, limit, per_keyword_limit, page_offset
                 )
                 all_items.extend(source_items)
                 logger.info(f"[Pipeline] {source} 采集完成: {len(source_items)} 条")
@@ -344,12 +347,16 @@ class CollectorStage(BasePipelineStage):
     
     async def _collect_from_source(self, crawler: BaseCrawler, task_type: str,
                                     keywords: Optional[List[str]], limit: int,
-                                    per_keyword_limit: int = 0) -> List[CrawlItem]:
-        """从单个源采集"""
+                                    per_keyword_limit: int = 0,
+                                    page_offset: int = 0) -> List[CrawlItem]:
+        """从单个源采集
+        
+        page_offset: 逐轮加深偏移，>0 时从更深的页/偏移开始抓取
+        """
         items = []
         
         if task_type == "trending":
-            async for item in crawler.get_trending(limit=limit):
+            async for item in crawler.get_trending(limit=limit, page_offset=page_offset):
                 items.append(item)
         elif task_type == "search" and keywords:
             if per_keyword_limit > 0:
@@ -357,7 +364,7 @@ class CollectorStage(BasePipelineStage):
             else:
                 per_keyword = max(limit // len(keywords), 10)
             for keyword in keywords:
-                async for item in crawler.search(keyword, limit=per_keyword):
+                async for item in crawler.search(keyword, limit=per_keyword, page_offset=page_offset):
                     items.append(item)
                     if len(items) >= limit:
                         break
@@ -365,7 +372,7 @@ class CollectorStage(BasePipelineStage):
                     break
         else:
             # 默认获取热门
-            async for item in crawler.get_trending(limit=limit):
+            async for item in crawler.get_trending(limit=limit, page_offset=page_offset):
                 items.append(item)
         
         return items[:limit]

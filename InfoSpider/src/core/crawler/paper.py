@@ -128,8 +128,9 @@ class PaperCrawler(BaseCrawler):
         fields_of_study = filters.get("fields_of_study", self.fields_of_study) or []
 
         yielded = 0
-        offset = 0
         page_size = min(max(self.per_page, 1), 100)
+        page_offset = int(filters.get("page_offset", 0) or 0)
+        offset = page_offset * limit if page_offset > 0 else 0
 
         while yielded < limit:
             params = {
@@ -167,7 +168,7 @@ class PaperCrawler(BaseCrawler):
 
         logger.info(f"[paper] 搜索完成: keyword={keyword}, 结果={yielded}")
 
-    async def get_trending(self, category: str = "", limit: int = 20) -> AsyncIterator[CrawlItem]:
+    async def get_trending(self, category: str = "", limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """获取近期论文；Semantic Scholar 无官方趋势API，这里用近期年份+引用阈值近似"""
         trending_cfg = self.source_config.get("trending", {})
         query = category or trending_cfg.get("default_query", "artificial intelligence")
@@ -177,7 +178,9 @@ class PaperCrawler(BaseCrawler):
         current_year = datetime.now().year
         year_range = f"{current_year - recent_years + 1}-{current_year}"
 
-        async for item in self.search(query, limit=limit, year=year_range, min_citations=min_citations):
+        page_offset = int(filters.get("page_offset", 0) or 0)
+        async for item in self.search(query, limit=limit, year=year_range,
+                                      min_citations=min_citations, page_offset=page_offset):
             yield item
 
     async def get_content(self, item: CrawlItem) -> str:

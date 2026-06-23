@@ -101,12 +101,13 @@ class BaseCrawler(ABC):
         yield  # type: ignore
     
     @abstractmethod
-    async def get_trending(self, category: str = "", limit: int = 20) -> AsyncIterator[CrawlItem]:
+    async def get_trending(self, category: str = "", limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """获取热门/趋势内容
         
         Args:
             category: 分类/频道
             limit: 最大返回数量
+            **filters: 平台特有参数（如 page_offset 用于逐轮加深）
             
         Yields:
             CrawlItem: 热门内容
