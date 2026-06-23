@@ -10,6 +10,7 @@ from loguru import logger
 
 from .base import BaseCrawler, CrawlItem
 from .registry import CrawlerRegistry
+from .http_util import request_with_backoff
 from ...utils.config import get_config
 
 
@@ -56,6 +57,7 @@ class PaperCrawler(BaseCrawler):
 
         rate_cfg = self.source_config.get("rate_limit", {})
         self.requests_per_minute = int(rate_cfg.get("requests_per_minute", 20) or 20)
+        self.max_retries = int(rate_cfg.get("max_retries", 2) or 2) if rate_cfg.get("retry_on_failure", True) else 0
         self._request_count = 0
         self._minute_start = 0.0
 
@@ -96,22 +98,26 @@ class PaperCrawler(BaseCrawler):
             return None
 
         await self._rate_limit()
-        try:
-            resp = await self._client.get(url, params=params)
-            if resp.status_code == 200:
-                return resp.json()
+        resp = await request_with_backoff(
+            self._client, url, params=params,
+            max_retries=self.max_retries, tag="paper",
+        )
+        if resp is None:
+            return None
 
-            if resp.status_code in (403, 429):
-                retry_after = resp.headers.get("retry-after", "")
-                suffix = f"，建议等待 {retry_after} 秒" if retry_after else ""
-                logger.warning(f"[paper] API限流或权限不足{suffix}")
+        if resp.status_code == 200:
+            try:
+                return resp.json()
+            except Exception as e:
+                logger.warning(f"[paper] 响应解析失败: {e}")
                 return None
 
-            logger.warning(f"[paper] HTTP错误: status={resp.status_code}, body={resp.text[:200]}")
+        if resp.status_code in (403, 429):
+            logger.warning("[paper] API限流或权限不足(重试后仍失败)")
             return None
-        except Exception as e:
-            logger.warning(f"[paper] 请求异常: {e}")
-            return None
+
+        logger.warning(f"[paper] HTTP错误: status={resp.status_code}, body={resp.text[:200]}")
+        return None
 
     async def search(self, keyword: str, limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """搜索论文"""

@@ -10,6 +10,7 @@ from loguru import logger
 
 from .base import BaseCrawler, CrawlItem
 from .registry import CrawlerRegistry
+from .http_util import request_with_backoff
 from ...utils.config import get_config
 
 
@@ -43,6 +44,7 @@ class GitHubCrawler(BaseCrawler):
 
         rate_cfg = self.source_config.get("rate_limit", {})
         self.requests_per_minute = rate_cfg.get("requests_per_minute", 20)
+        self.max_retries = int(rate_cfg.get("max_retries", 2) or 2) if rate_cfg.get("retry_on_failure", True) else 0
         self._request_count = 0
         self._minute_start = 0.0
 
@@ -88,25 +90,34 @@ class GitHubCrawler(BaseCrawler):
             return None
 
         await self._rate_limit()
-        try:
-            resp = await self._client.get(url, params=params)
-            if resp.status_code == 200:
-                return resp.json()
+        resp = await request_with_backoff(
+            self._client, url, params=params,
+            max_retries=self.max_retries, tag="github",
+        )
+        if resp is None:
+            return None
 
-            if resp.status_code in (403, 429):
-                reset = resp.headers.get("x-ratelimit-reset")
-                if reset:
-                    reset_at = datetime.fromtimestamp(int(reset)).isoformat()
-                    logger.warning(f"[github] API限流，重置时间: {reset_at}")
-                else:
-                    logger.warning("[github] API限流或权限不足")
+        if resp.status_code == 200:
+            try:
+                return resp.json()
+            except Exception as e:
+                logger.warning(f"[github] 响应解析失败: {e}")
                 return None
 
-            logger.warning(f"[github] HTTP错误: status={resp.status_code}, body={resp.text[:200]}")
+        if resp.status_code in (403, 429):
+            reset = resp.headers.get("x-ratelimit-reset")
+            if reset:
+                try:
+                    reset_at = datetime.fromtimestamp(int(reset)).isoformat()
+                    logger.warning(f"[github] API限流(重试后仍失败)，重置时间: {reset_at}")
+                except ValueError:
+                    logger.warning("[github] API限流或权限不足(重试后仍失败)")
+            else:
+                logger.warning("[github] API限流或权限不足(重试后仍失败)")
             return None
-        except Exception as e:
-            logger.warning(f"[github] 请求异常: {e}")
-            return None
+
+        logger.warning(f"[github] HTTP错误: status={resp.status_code}, body={resp.text[:200]}")
+        return None
 
     async def search(self, keyword: str, limit: int = 20, **filters) -> AsyncIterator[CrawlItem]:
         """搜索 GitHub 仓库"""
