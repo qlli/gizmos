@@ -94,6 +94,29 @@ python cli.py collect -c ./config/collections/default.json
 - `match.require_keyword_match`: 为 `true` 时，未命中关键词的内容会被过滤
 - `match.blacklist_keywords` / `match.spam_keywords`: 额外的黑名单/垃圾词
 
+### 4.2 夜间持续采集
+
+适合夜间电脑空闲时长时间采集高质量内容，到指定时刻自动停止。
+持续模式会跨轮去重（只对新内容评分），每轮结果按质量累积并周期性落盘，
+即使中途中断也能保留已采集结果。
+
+```bash
+# 持续采集到次日早上 8:00（夜间运行，上班前停止）
+python cli.py collect -c gamedev --until 08:00 --no-report
+
+# 指定总时长（分钟），如运行 6 小时
+python cli.py collect -c gamedev --duration 360 --no-report
+
+# 自定义每轮间隔（秒），默认 300
+python cli.py collect -c gamedev --until 08:00 --interval 600 --no-report
+```
+
+- `--until HH:MM`: 截止时刻，若该时刻已过则自动顺延到次日
+- `--duration N`: 总运行时长（分钟），与 `--until` 二选一
+- `--interval N`: 每轮采集之间的等待秒数（默认 300）
+
+夜间运行建议加 `--no-report` 避免自动弹出浏览器。
+
 ### 5. 管理兴趣标签
 
 ```bash

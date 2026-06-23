@@ -29,6 +29,9 @@ def collect(
     limit: int = typer.Option(20, "--limit", "-l", help="每个源的最大采集数量"),
     trending: bool = typer.Option(False, "--trending", "-t", help="获取热门内容(不指定关键词时)"),
     collection: Optional[str] = typer.Option(None, "--collection", "-c", help="采集配置名或JSON路径(提供则覆盖 -s/-k/-l)"),
+    until: Optional[str] = typer.Option(None, "--until", help="持续采集至指定时刻(HH:MM, 已过则视为次日), 适合夜间运行"),
+    duration_minutes: Optional[int] = typer.Option(None, "--duration", help="持续采集的总时长(分钟), 与 --until 二选一"),
+    interval: int = typer.Option(300, "--interval", help="持续采集模式下每轮间隔秒数"),
     user: str = typer.Option("default", "--user", "-u", help="用户ID"),
     no_report: bool = typer.Option(False, "--no-report", help="不自动打开HTML报告"),
     headless: bool = typer.Option(True, "--headless/--no-headless", help="浏览器无头模式"),
@@ -70,13 +73,32 @@ def collect(
         typer.echo("提示: 未指定关键词，将使用热门模式")
         task_type = "trending"
     
+    # 解析持续采集截止时间
+    deadline = _resolve_deadline(until, duration_minutes)
+    
     if collection_cfg:
         typer.echo(f"使用采集配置: {collection_cfg.name} - {collection_cfg.description}")
+    
+    if deadline:
+        typer.echo(f"夜间持续采集模式: 截止 {deadline.strftime('%Y-%m-%d %H:%M')}, "
+                   f"每轮间隔 {interval}s")
     typer.echo(f"开始采集: 源={sources}, 关键词={keywords or '热门'}, 数量={limit}")
     
     async def _run():
         async with CollectorStage() as stage:
-            results = await stage.run(
+            if deadline:
+                return await stage.run_continuous(
+                    deadline=deadline,
+                    interval_seconds=interval,
+                    collection=collection_cfg,
+                    sources=sources,
+                    keywords=keywords if keywords else None,
+                    limit=limit,
+                    task_type=task_type,
+                    user_id=user,
+                    auto_open_report=not no_report,
+                )
+            return await stage.run(
                 collection=collection_cfg,
                 sources=sources,
                 keywords=keywords if keywords else None,
@@ -85,7 +107,6 @@ def collect(
                 user_id=user,
                 auto_open_report=not no_report,
             )
-            return results
     
     results = asyncio.run(_run())
     
@@ -96,6 +117,28 @@ def collect(
             typer.echo(f"  {i}. [{item.source}/{item.item_type}] {item.title}")
             typer.echo(f"     {item.url}")
             typer.echo(f"     👍{item.voteup} 👁{item.view_count} 💬{item.comment_count}")
+
+
+def _resolve_deadline(until: Optional[str], duration_minutes: Optional[int]):
+    """解析持续采集截止时间，未指定则返回 None(单次采集)"""
+    from datetime import datetime, timedelta
+    
+    if duration_minutes and duration_minutes > 0:
+        return datetime.now() + timedelta(minutes=duration_minutes)
+    
+    if until:
+        try:
+            hh, mm = until.strip().split(":")
+            now = datetime.now()
+            deadline = now.replace(hour=int(hh), minute=int(mm), second=0, microsecond=0)
+            if deadline <= now:
+                deadline += timedelta(days=1)  # 已过则顺延到次日
+            return deadline
+        except ValueError:
+            typer.echo(f"错误: --until 格式应为 HH:MM, 收到 '{until}'")
+            raise typer.Exit(1)
+    
+    return None
 
 
 @app.command()
