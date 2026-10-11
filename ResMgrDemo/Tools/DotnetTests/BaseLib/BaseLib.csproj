@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Base</AssemblyName>
+    <RootNamespace>Base</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <Nullable>disable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\Assets\Scripts\Base\**\*.cs" Exclude="..\..\..\Assets\Scripts\Base\Tests\**" />
+  </ItemGroup>
+</Project>

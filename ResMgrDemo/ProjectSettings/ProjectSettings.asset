@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!159 &1
+PlayerSettings:
+  companyName: ResMgrDemo
+  productName: ResMgrDemo
+  bundleVersion: 0.1.0
+  AndroidBundleVersionCode: 1
+  iPhoneBundleVersion: 1.0
+  AndroidMinSdkVersion: 22
+  AndroidTargetSdkVersion: 30
+  scriptingBackend: 1
+  apiCompatibilityLevel: 2
+  targetPlatforms:
+  - StandaloneWindows64
+  - Android
+  - iOS
+  scriptCompilationSettings:
+    allowUnsafeCode: false
+    suppressCommonWarnings: false
+  enableCrashReportApi: false
+  actionOnDotNetUnhandledException: 2
+  logObjCUncaughtExceptions: true
+  enableNativePlatformBackends: true
+  il2cppCompilerConfiguration: 0
+  il2cppStacktraceInformation: 0
+  scriptingDefineSymbols:
+    StandaloneWindows64: 
+    Android: 
+    iOS: 
+  architecture: 0
+  scriptingRuntimeVersion: 1
