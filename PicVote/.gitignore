@@ -1,0 +1,7 @@
+data/
+sources.txt
+secrets/
+__pycache__/
+*.pyc
+*.log
+.venv/

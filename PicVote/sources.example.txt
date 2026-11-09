@@ -1,0 +1,20 @@
+# 来源清单模板。复制为 sources.txt 后按需要填写。
+# 每行格式：<分类>|<类型>|<值>，分类只能是 beauty（美女）或 handsome（帅哥）。
+#
+# 类型 page   ：普通 HTML 页面，抽取页面中的 <img>（遵守 robots.txt、限速）
+# 类型 image  ：单张图片直链
+# 类型 dir    ：本地目录（用户自有图片，不产生网络请求）
+# 类型 jandan ：煎蛋栏目专用适配器，解析公开列表接口并过滤装饰图
+#
+# 示例（请替换为你自己有权使用的地址）：
+# beauty|page|https://example.com/some/gallery
+# handsome|image|https://example.com/photo.jpg
+# beauty|dir|./my-images
+# beauty|jandan|https://jandan.net/beauty
+#
+# 说明：
+# 1. 抓取器不登录、不维持 Cookie、不伪造签名、不绕过风控 / 验证码、
+#    不做 JS 渲染或反检测。公开接口若要求登录，会如实记日志并停止，不绕过。
+# 2. jandan 适配器会过滤 /static/tg/ 等站点装饰图，只取栏目正文内容图。
+# 3. 分类由本清单显式标注，程序不做图像识别分类。
+# 4. 文件不存在或为空时，服务仍可浏览已抓到的图片，只是不再抓新图。

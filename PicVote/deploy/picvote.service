@@ -1,0 +1,20 @@
+[Unit]
+Description=PicVote personal image service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/picvote
+Environment=PICVOTE_ROOT=/opt/picvote
+Environment=PICVOTE_HOST=0.0.0.0
+Environment=PICVOTE_PORT=18080
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -u /opt/picvote/app.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
