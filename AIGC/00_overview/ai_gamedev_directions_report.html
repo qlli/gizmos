@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 辅助游戏开发 · 方向全景与进展</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2937; --ink2:#4b5563; --ink3:#6b7280;
+    --line:#e5e7eb; --blue:#2563eb; --blue-l:#eff6ff;
+    --green:#16a34a; --green-l:#f0fdf4;
+    --amber:#d97706; --amber-l:#fffbeb;
+    --gray:#9ca3af; --gray-l:#f9fafb;
+    --purple:#7c3aed; --purple-l:#f5f3ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",-apple-system,"Segoe UI",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; padding:32px 20px 60px;
+  }
+  .wrap{max-width:1180px;margin:0 auto}
+
+  /* ---------- 页头 ---------- */
+  header{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin-bottom:24px}
+  h1{font-size:27px;font-weight:700;letter-spacing:.5px}
+  h1 span{color:var(--blue)}
+  .sub{color:var(--ink3);font-size:14px;margin-top:8px}
+  .meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:12px;background:var(--blue-l);color:var(--blue);border:1px solid #dbeafe;padding:3px 10px;border-radius:20px}
+
+  /* ---------- 数字条 ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:26px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
+  .kpi b{display:block;font-size:28px;color:var(--blue);line-height:1.2}
+  .kpi small{color:var(--ink3);font-size:13px}
+
+  /* ---------- 区块 ---------- */
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-bottom:22px}
+  h2{font-size:19px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+  h2::before{content:"";width:5px;height:19px;background:var(--blue);border-radius:3px}
+  .lead{color:var(--ink3);font-size:14px;margin-bottom:18px}
+
+  /* ---------- 图1：四维度 ---------- */
+  .dims{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .dim{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--gray-l)}
+  .dim h3{font-size:15px;margin-bottom:4px}
+  .dim .en{font-size:11px;color:var(--ink3);letter-spacing:.3px;margin-bottom:10px}
+  .dim ul{list-style:none;font-size:13px;color:var(--ink2)}
+  .dim li{padding:5px 0;border-top:1px dashed var(--line)}
+  .dim li:first-child{border-top:none}
+  .dim li b{color:var(--ink);font-weight:600}
+  .d1{background:var(--blue-l);border-color:#dbeafe}
+  .d2{background:var(--purple-l);border-color:#ede9fe}
+  .d3{background:var(--green-l);border-color:#dcfce7}
+  .d4{background:var(--amber-l);border-color:#fef3c7}
+
+  /* ---------- 图2：能力分层 ---------- */
+  .stack{display:flex;flex-direction:column;gap:10px}
+  .layer{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:stretch;
+         border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .layer .lab{display:flex;flex-direction:column;justify-content:center;align-items:center;
+              color:#fff;text-align:center;padding:14px 8px}
+  .layer .lab b{font-size:14px}
+  .layer .lab small{font-size:11px;opacity:.85}
+  .layer .body{padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px;align-content:center;background:var(--card)}
+  .chip{font-size:12.5px;padding:5px 11px;border-radius:6px;background:var(--gray-l);
+        border:1px solid var(--line);color:var(--ink2)}
+  .chip b{color:var(--ink);font-weight:600}
+  .L1 .lab{background:#0ea5e9} .L2 .lab{background:#8b5cf6}
+  .L3 .lab{background:#f59e0b} .L4 .lab{background:#2563eb}
+  .arrowdown{text-align:center;color:var(--gray);font-size:14px;line-height:1}
+
+  /* ---------- 图3：十方向卡片 ---------- */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:15px 17px;background:var(--card);position:relative}
+  .card.active{border-color:#93c5fd;box-shadow:0 0 0 3px #eff6ff}
+  .chead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+  .cid{font-size:12px;color:#fff;background:var(--ink3);border-radius:5px;padding:2px 7px;font-weight:700}
+  .card.active .cid{background:var(--blue)}
+  .cname{font-size:15px;font-weight:700;flex:1}
+  .badge{font-size:11.5px;padding:3px 9px;border-radius:20px;white-space:nowrap;border:1px solid}
+  .b-done{background:var(--green-l);color:var(--green);border-color:#bbf7d0}
+  .b-doing{background:var(--blue-l);color:var(--blue);border-color:#bfdbfe}
+  .b-wip{background:var(--amber-l);color:var(--amber);border-color:#fde68a}
+  .b-none{background:var(--gray-l);color:var(--gray);border-color:var(--line)}
+  .cq{font-size:13px;color:var(--ink2);margin-bottom:8px}
+  .cq b{color:var(--ink3);font-weight:400}
+  .ctech{font-size:12.5px;color:var(--ink3);border-top:1px dashed var(--line);padding-top:7px}
+  .ctech b{color:var(--ink2);font-weight:600}
+
+  /* ---------- 图4：进度矩阵 ---------- */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+  th{background:var(--gray-l);font-size:12.5px;color:var(--ink3);font-weight:600}
+  td.mono{font-family:Consolas,Menlo,monospace;font-size:12.5px;color:var(--ink3)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  .dot.g{background:var(--green)} .dot.b{background:var(--blue)} .dot.a{background:var(--amber)} .dot.n{background:#d1d5db}
+  .legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink3);margin-top:14px;flex-wrap:wrap}
+
+  /* ---------- 图5：路线图 ---------- */
+  .phase{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px;background:var(--gray-l)}
+  .ph{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;flex-wrap:wrap;gap:6px}
+  .ph b{font-size:15px}
+  .ph .goal{font-size:12.5px;color:var(--ink3)}
+  .bar{height:9px;background:#e5e7eb;border-radius:6px;overflow:hidden;margin:10px 0 12px}
+  .bar i{display:block;height:100%;border-radius:6px}
+  .items{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;font-size:13px;color:var(--ink2)}
+  .items div{padding-left:20px;position:relative}
+  .items div::before{content:"";position:absolute;left:4px;top:7px;width:9px;height:9px;border-radius:2px;border:1.5px solid var(--gray)}
+  .items div.doing::before{background:var(--amber);border-color:var(--amber)}
+  .items div.done::before{background:var(--green);border-color:var(--green)}
+
+  /* ---------- 图6/7 ---------- */
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .dec{display:flex;flex-direction:column;gap:9px}
+  .dec .row{border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;
+            padding:10px 14px;background:var(--amber-l);font-size:13.5px}
+  .dec .row b{display:block;color:var(--ink);margin-bottom:2px}
+  .dec .row span{color:var(--ink3);font-size:12.5px}
+  ol.next{list-style:none;counter-reset:n}
+  ol.next li{counter-increment:n;position:relative;padding:11px 0 11px 34px;border-bottom:1px dashed var(--line);font-size:13.5px}
+  ol.next li:last-child{border-bottom:none}
+  ol.next li::before{content:counter(n);position:absolute;left:0;top:11px;width:22px;height:22px;
+    border-radius:50%;background:var(--blue);color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  ol.next li b{display:block;margin-bottom:2px}
+  ol.next li span{color:var(--ink3);font-size:12.5px}
+  .prin{list-style:none;font-size:13.5px}
+  .prin li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line)}
+  .prin li:last-child{border-bottom:none}
+  .prin li::before{content:"▸";position:absolute;left:6px;color:var(--blue);font-weight:700}
+
+  footer{text-align:center;color:var(--ink3);font-size:12.5px;padding:18px 0 0}
+
+  @media (max-width:980px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .dims,.cards,.cols2,.items{grid-template-columns:1fr}
+    .layer{grid-template-columns:1fr}
+  }
+  @media print{
+    body{background:#fff;padding:0}
+    section{break-inside:avoid;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>AI 辅助游戏开发 · <span>方向全景与进展</span></h1>
+    <div class="sub">基于 AIGC 工程（<code>D:\proj\gizmos\AIGC</code>）21 篇文档梳理 · 用于方向汇报与资源对齐</div>
+    <div class="meta">
+      <span class="tag">4 大维度</span>
+      <span class="tag">10 个方向</span>
+      <span class="tag">21 篇文档</span>
+      <span class="tag">3 个阶段路线图</span>
+      <span class="tag">当前活跃：AI 自动镜头</span>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><b>4</b><small>战略维度</small></div>
+    <div class="kpi"><b>10</b><small>研究方向</small></div>
+    <div class="kpi"><b>21</b><small>沉淀文档</small></div>
+    <div class="kpi"><b>1 / 6</b><small>Phase 1 子项推进</small></div>
+    <div class="kpi"><b>5</b><small>待决策技术选型</small></div>
+  </div>
+
+  <!-- 图 1 -->
+  <section>
+    <h2>一、总体框架：四大维度</h2>
+    <p class="lead">以 AI-Native 工作模式为导向，在游戏研发四个维度建立可复用实践。</p>
+    <div class="dims">
+      <div class="dim d1">
+        <h3>① 组织效率提升</h3>
+        <div class="en">Efficiency</div>
+        <ul>
+          <li><b>02 AI Coding</b> — 代码生成 / 测试 / 评审 / 协同</li>
+          <li><b>08 Agent 工作流</b> — 数字员工、自动化协同</li>
+        </ul>
+      </div>
+      <div class="dim d2">
+        <h3>② AIGC 资产工程化</h3>
+        <div class="en">Asset Pipeline</div>
+        <ul>
+          <li><b>01 AIGC 资产</b> — 原画→模型→动画→绑定→贴图→剧情动画</li>
+          <li><b>06 管线适配</b> — LOD / 碰撞 / 材质 / 命名标准化</li>
+        </ul>
+      </div>
+      <div class="dim d3">
+        <h3>③ 新范式研发</h3>
+        <div class="en">New Paradigms</div>
+        <ul>
+          <li><b>03 PCG+AI 场景</b> — 语义合理的场景生成</li>
+          <li><b>04 AI 自动测试</b> — 玩法 / 画面 / Bug 检测</li>
+          <li><b>05 AI 自动镜头</b> — 情绪驱动的电影化镜头</li>
+          <li><b>07 AI 渲染参数</b> — 渲染 / 布料 / 自动打光</li>
+        </ul>
+      </div>
+      <div class="dim d4">
+        <h3>④ 知识沉淀与推广</h3>
+        <div class="en">Knowledge</div>
+        <ul>
+          <li><b>00 整体规划</b> — 路线图 / 方法论 / 决策记录</li>
+          <li><b>09 工程实验</b> — 0→1 验证记录</li>
+          <li><b>10 通用资源</b> — 论文 / 工具链 / 环境</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图 2 -->
+  <section>
+    <h2>二、能力分层：从模型到落地</h2>
+    <p class="lead">十方向横向打通后的技术栈分层——上层能力依赖下层，汇报时可据此说明"先补基础、再做工程"的推进逻辑。</p>
+    <div class="stack">
+      <div class="layer L4">
+        <div class="lab"><b>L4 系统协同层</b><small>流程与系统</small></div>
+        <div class="body">
+          <span class="chip"><b>AI Agent 工作流</b>（LangGraph / AutoGen / CrewAI）</span>
+          <span class="chip"><b>AI 自动测试</b>（RL Agent 探索 · 视觉异常检测）</span>
+          <span class="chip"><b>AI 自动镜头</b>（情绪标签 → 镜头规则 → Sequencer）</span>
+          <span class="chip"><b>自动渲染参数</b>（后处理 / 布料 / 打光）</span>
+          <span class="chip"><b>AI Coding</b>（代码生成 · 评审 · 协同）</span>
+        </div>
+      </div>
+      <div class="arrowdown">▲</div>
+      <div class="layer L3">
+        <div class="lab"><b>L3 工程适配层</b><small>能用进引擎</small></div>
+        <div class="body">
+          <span class="chip"><b>资产管线适配</b>（重拓扑 / LOD / 碰撞 / PBR 标准化）</span>
+          <span class="chip"><b>引擎集成</b>（UE5 PCG Graph · Sequencer · Chaos Cloth / Unity Cinemachine · HDRP）</span>
+          <span class="chip"><b>资产 Linter</b>（几何 / 材质 / 命名校验）</span>
+        </div>
+      </div>
+      <div class="arrowdown">▲</div>
+      <div class="layer L2">
+        <div class="lab"><b>L2 生成能力层</b><small>内容生产</small></div>
+        <div class="body">
+          <span class="chip"><b>原画</b>（SD/SDXL/Flux + ControlNet + LoRA）</span>
+          <span class="chip"><b>3D 模型</b>（TripoSR / InstantMesh / Rodin）</span>
+          <span class="chip"><b>角色动画</b>（MDM / MotionDiffuse / MoCap）</span>
+          <span class="chip"><b>自动绑定</b>（RigNet / AccuRIG）</span>
+          <span class="chip"><b>贴图增强</b>（Real-ESRGAN / ControlNet Tile）</span>
+          <span class="chip"><b>场景生成</b>（WFC / Grammar + LLM 语义约束）</span>
+        </div>
+      </div>
+      <div class="arrowdown">▲</div>
+      <div class="layer L1">
+        <div class="lab"><b>L1 基础模型层</b><small>认知地图</small></div>
+        <div class="body">
+          <span class="chip"><b>视觉基础</b>（ViT · Diffusion · NeRF / 3DGS）</span>
+          <span class="chip"><b>多模态大模型</b>（CLIP · LLaVA · GPT-4V）</span>
+          <span class="chip"><b>Code LLM</b>（DeepSeek-Coder · Qwen-Coder · CodeLlama）</span>
+          <span class="chip"><b>强化学习</b>（PPO / DQN · Unity ML-Agents）</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图 3 -->
+  <section>
+    <h2>三、十大方向卡片</h2>
+    <p class="lead">每个方向的核心问题、关键技术、当前状态。蓝色高亮为当前重点推进方向。</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="chead"><span class="cid">01</span><span class="cname">AIGC 游戏资产工程化</span><span class="badge b-wip">部分展开</span></div>
+        <div class="cq"><b>核心问题：</b>原画→模型→动画→绑定→贴图→剧情动画全链路 AI 化</div>
+        <div class="ctech"><b>关键技术：</b>SD/Flux + ControlNet + LoRA · TripoSR/InstantMesh/Rodin · MotionDiffuse/MDM · RigNet · ControlNet Tile</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">02</span><span class="cname">AI Coding 工程化</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>代码生成 / 测试辅助 / 代码评审 / 研发协同</div>
+        <div class="ctech"><b>关键技术：</b>Copilot · Cursor · DeepSeek-Coder / Qwen2.5-Coder · Tree-sitter AST · LangGraph/AutoGen/CrewAI</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">03</span><span class="cname">PCG + AI 场景生成</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>结合传统程序化生成与 AI，产出语义合理、视觉丰富的场景</div>
+        <div class="ctech"><b>关键技术：</b>WFC / L-System / Noise · LLM 语义约束（JSON Schema）· HoloDeck / SceneScript / InstructScene · UE PCG Graph / Houdini</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">04</span><span class="cname">AI 自动测试</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>玩法测试 / 画面测试 / Bug 检测三类自动化</div>
+        <div class="ctech"><b>关键技术：</b>PPO/DQN 探索 Agent · 感知哈希 + Anomalib · CLIP 语义对齐 · 多模态 LLM 出 Bug 报告</div>
+      </div>
+
+      <div class="card active">
+        <div class="chead"><span class="cid">05</span><span class="cname">AI 自动镜头</span><span class="badge b-doing">活跃 · 4 层已建 2 层</span></div>
+        <div class="cq"><b>核心问题：</b>让 AI 理解剧情/情绪，自动生成摄影机运动与切换方案</div>
+        <div class="ctech"><b>关键技术：</b>电影镜头语言 → 游戏映射表 · 状态机驱动镜头 · 情绪标签→镜头规则 · LLM 剧本→镜头 JSON · Cine-AI / Cinemachine / UE Sequencer</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">06</span><span class="cname">AIGC 资产管线适配</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>AI 生成资产自动满足引擎规范（几何/LOD/碰撞/材质/命名）</div>
+        <div class="ctech"><b>关键技术：</b>Instant Meshes / QuadriFlow 重拓扑 · Simplygon · xNormal 烘焙 · Blender Python / Houdini PDG</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">07</span><span class="cname">AI 渲染 / 布料 / 光照参数</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>由内容或描述自动推导后处理、物理与光照参数</div>
+        <div class="ctech"><b>关键技术：</b>CLIP/DINO 风格迁移 · Post Process Volume · Chaos Cloth + DiffCloth · DiffusionLight / Neural Gaffer</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">08</span><span class="cname">AI Agent 与自动化工作流</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>构建游戏研发场景的数字员工与自动化协同系统</div>
+        <div class="ctech"><b>关键技术：</b>ReAct / CoT / Tool Use · LangGraph 有向图 · AutoGen 多 Agent · RAG 知识库 · Human-in-the-Loop</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">09</span><span class="cname">工程实验记录</span><span class="badge b-none">待启动</span></div>
+        <div class="cq"><b>核心问题：</b>把方向假设变成可度量结果的最小闭环</div>
+        <div class="ctech"><b>选题梯度：</b>入门（ComfyUI / TripoSR / LangChain）→ 中级（LoRA 微调 / Blender 脚本）→ 挑战（PCG+LLM / 异常检测 / 剧本→镜头）</div>
+      </div>
+
+      <div class="card">
+        <div class="chead"><span class="cid">10</span><span class="cname">通用资源与环境</span><span class="badge b-none">仅框架</span></div>
+        <div class="cq"><b>核心问题：</b>论文、工具链、算力环境统一基线</div>
+        <div class="ctech"><b>资源优先级：</b>P0 顶会 best paper + 引擎官方方案 · P1 HF Demo + 行业 Blog · P2 arXiv 预印本</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 图 4 -->
+  <section>
+    <h2>四、进度矩阵</h2>
+    <p class="lead">整体处于"框架已搭、重点方向纵深推进"阶段：10 个方向中 1 个已建框架、1 个纵深推进（AI 镜头），其余待展开。</p>
+    <table>
+      <thead>
+        <tr><th style="width:22%">方向</th><th style="width:26%">目录</th><th style="width:16%">状态</th><th>说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>整体规划</td><td class="mono">00_overview/</td><td><span class="dot g"></span>已完成</td><td>roadmap + decisions + CV 基础（10.7 KB）</td></tr>
+        <tr><td>AIGC 资产</td><td class="mono">01_aigc_assets/</td><td><span class="dot a"></span>部分展开</td><td>README + 原画子方向 README</td></tr>
+        <tr><td>AI Coding</td><td class="mono">02_ai_coding/</td><td><span class="dot n"></span>仅 README</td><td>4 个子目录待填</td></tr>
+        <tr><td>PCG+AI 场景</td><td class="mono">03_pcg_scene_generation/</td><td><span class="dot n"></span>仅 README</td><td>3 个实验方向未启动</td></tr>
+        <tr><td>AI 自动测试</td><td class="mono">04_ai_auto_testing/</td><td><span class="dot n"></span>仅 README</td><td>3 个子目录待填</td></tr>
+        <tr><td><b>AI 自动镜头</b></td><td class="mono">05_ai_auto_camera/</td><td><span class="dot b"></span><b>活跃推进</b></td><td>四层结构已建两层（电影语言基础 + 电影→游戏映射）</td></tr>
+        <tr><td>资产管线适配</td><td class="mono">06_asset_pipeline_adaptation/</td><td><span class="dot n"></span>仅 README</td><td>3 个实验方向未启动</td></tr>
+        <tr><td>AI 渲染参数</td><td class="mono">07_ai_rendering_params/</td><td><span class="dot n"></span>仅 README</td><td>3 个子目录待填</td></tr>
+        <tr><td>Agent 工作流</td><td class="mono">08_ai_agent_workflow/</td><td><span class="dot n"></span>仅 README</td><td>框架对比已梳理</td></tr>
+        <tr><td>实验 / 资源</td><td class="mono">09_ · 10_</td><td><span class="dot n"></span>空</td><td>实验列表与资源基线待填</td></tr>
+      </tbody>
+    </table>
+    <div class="legend">
+      <span><span class="dot g"></span>已完成</span>
+      <span><span class="dot a"></span>部分展开</span>
+      <span><span class="dot b"></span>活跃推进</span>
+      <span><span class="dot n"></span>仅框架 / 未启动</span>
+    </div>
+
+    <h2 style="margin-top:26px">4.1 重点方向：AI 自动镜头（05）内部进度</h2>
+    <p class="lead">四层学习结构，前两层（理论根基 + 游戏映射）已落地，后两层（顶会研究 / AI 前沿）待补。</p>
+    <table>
+      <thead><tr><th style="width:16%">层级</th><th style="width:40%">内容</th><th style="width:16%">状态</th><th>要点</th></tr></thead>
+      <tbody>
+        <tr><td>第一层</td><td>电影镜头语言基础</td><td><span class="dot g"></span>已完成</td><td>理论框架 / 书单 / 课程 / 视频 4 篇齐备</td></tr>
+        <tr><td>第二层</td><td>电影 → 游戏映射</td><td><span class="dot g"></span>已完成</td><td>控制权分配、景别/运动/剪辑映射表、状态机驱动、情感驱动镜头</td></tr>
+        <tr><td>第三层</td><td>GDC / SIGGRAPH 顶会 · 引擎教程 · 开源走读</td><td><span class="dot n"></span>待补充</td><td>Virtual Cinematographer (1996)、Example-driven (2020)、Cine-AI (CHI PLAY 2022)</td></tr>
+        <tr><td>第四层</td><td>AI 自动镜头研究前沿</td><td><span class="dot n"></span>待补充</td><td>LLM 剧情→情绪→镜头 JSON、RL 构图美感奖励</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 图 5 -->
+  <section>
+    <h2>五、三阶段路线图进度</h2>
+    <p class="lead">Phase 1 扎根（认知地图）→ Phase 2 立柱（0→1 落地）→ Phase 3 扩面（系统化推广）。</p>
+
+    <div class="phase">
+      <div class="ph"><b>Phase 1 · 基础补齐（扎根）</b><span class="goal">建立各方向技术认知地图与工具链认知 · 进度 1/6</span></div>
+      <div class="bar"><i style="width:17%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></i></div>
+      <div class="items">
+        <div class="doing">计算机视觉基础回顾（ViT / Diffusion / NeRF·3DGS）</div>
+        <div>多模态大模型原理（CLIP / LLaVA / GPT-4V）</div>
+        <div>Diffusion 模型体系（SD / SDXL / Flux / ControlNet / LoRA）</div>
+        <div>3D 生成基础（TripoSR / Zero123 / Instant3D / DreamFusion）</div>
+        <div>AI Coding 工具链（Cursor / Copilot / CodeAgent）</div>
+        <div>Agent 框架（LangChain / LangGraph / AutoGen / CrewAI）</div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph"><b>Phase 2 · 方向深耕（立柱）</b><span class="goal">2–3 个核心方向完成 0→1 工程落地 · 进度 0/5</span></div>
+      <div class="bar"><i style="width:3%;background:#e5e7eb"></i></div>
+      <div class="items">
+        <div>AIGC 原画管线（ComfyUI + ControlNet + LoRA 微调）</div>
+        <div>AI 角色动画（MoCap + Motion Diffusion + Retarget）</div>
+        <div>PCG+AI 场景生成（WFC / Grammar + LLM 语义约束）</div>
+        <div>AI 自动 Bug 检测（视觉异常检测 + LLM 描述）</div>
+        <div>AI Coding Agent 接入真实研发流程</div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph"><b>Phase 3 · 系统化（扩面）</b><span class="goal">单点能力系统化，形成可推广工作流 · 进度 0/5</span></div>
+      <div class="bar"><i style="width:3%;background:#e5e7eb"></i></div>
+      <div class="items">
+        <div>AIGC 资产适配游戏管线（LOD / 碰撞 / 材质标准化）</div>
+        <div>AI 自动打光与渲染参数生成</div>
+        <div>AI 镜头系统（关键帧驱动 + 情绪感知）</div>
+        <div>数字员工 / 自动化协同系统</div>
+        <div>团队培养与方法论文档化</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图 6 / 7 -->
+  <section>
+    <div class="cols2">
+      <div>
+        <h2>六、待决策技术选型</h2>
+        <p class="lead">5 项关键选型尚未拍板，阻塞后续 0→1 落地。</p>
+        <div class="dec">
+          <div class="row"><b>3D 生成主路线</b><span>TripoSR vs InstantMesh vs Rodin</span></div>
+          <div class="row"><b>Agent 框架主选</b><span>LangGraph vs AutoGen vs CrewAI</span></div>
+          <div class="row"><b>代码生成 LLM</b><span>DeepSeek-Coder vs Qwen-Coder vs GPT-4o</span></div>
+          <div class="row"><b>场景生成方案</b><span>PCG+LLM vs 端到端 3D Diffusion</span></div>
+          <div class="row"><b>贴图生成</b><span>ComfyUI 工作流 vs Substance AI vs 自建管线</span></div>
+        </div>
+      </div>
+      <div>
+        <h2>七、下一步建议</h2>
+        <p class="lead">三选一，推荐顺势深耕 AI 自动镜头。</p>
+        <ol class="next">
+          <li><b>继续深耕 AI 自动镜头（推荐）</b><span>补顶会论文 → UE5 Sequencer 实操 → LLM 剧情→镜头 JSON 方案设计</span></li>
+          <li><b>回到 Phase 1 主线</b><span>推进多模态大模型原理（CLIP / LLaVA / GPT-4V），保持与 roadmap 同频</span></li>
+          <li><b>做工程实验</b><span>09_experiments 落地最小闭环：UE5 Sequencer + LLM 镜头脚本 → 自动出一段过场动画</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图 8 -->
+  <section>
+    <h2>八、工程技术判断原则（沿用）</h2>
+    <p class="lead">四条原则用于所有方向的技术取舍与方案评审。</p>
+    <ul class="prin">
+      <li><b>先看能否用，再看能否改，最后才考虑自研</b></li>
+      <li><b>工程化 &gt; 算法精度</b> — 美术/研发可用的工具 &gt; 指标最好的论文复现</li>
+      <li><b>闭环验证</b> — 每个方向都要有可度量的效果指标</li>
+      <li><b>美术视角优先</b> — 从美术痛点出发设计方案，而非从技术倒推</li>
+    </ul>
+  </section>
+
+  <footer>
+    数据来源：D:\proj\gizmos\AIGC（README · 00_overview/RESUME · roadmap · decisions · 各方向 README · 05 镜头方向文档）<br>
+    文档生成时间：2026-11-02 · 共 21 篇 Markdown 梳理
+  </footer>
+
+</div>
+</body>
+</html>
